@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark redbg sticky-top">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapse_target">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link focus" id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Descripción</a>
+                    <a class="nav-item nav-link" id="nav-voc-catalog-tab" data-toggle="tab" href="#nav-voc-catalog" role="tab" aria-controls="nav-voc-catalog" aria-selected="false">Catálogo de Vocabularios</a>
+                    <a class="nav-item nav-link" id="nav-catalog-list-tab" data-toggle="tab" href="#nav-catalog-list" role="tab" aria-controls="nav-catalog-list" aria-selected="false">Catálogo de Listas SKOS</a>
+                    <a class="nav-item nav-link" id="nav-voc-tab" data-toggle="tab" href="#nav-voc" role="tab" aria-controls="nav-voc" aria-selected="false">Vocabularios Reutilizados</a>
+                </div>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show focus" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+                <p>hola</p>
+            </div>
+            <div class="tab-pane fade" id="nav-voc-catalog" role="tabpanel" aria-labelledby="nav-voc-catalog-tab">
+                <p>
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Vocabulario</th>
+                                    <th scope="col">Fecha Publicación</th>
+                                    <th scope="col">Prefijo</th>
+                                    <th scope="col">Serialización</th>
+                                    <th scope="col">Licencia</th>
+                                    <th scope="col">Idioma</th>
+                                    <th scope="col">Dominio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </p>
+            </div>
+            <div class="tab-pane fade" id="nav-catalog-list" role="tabpanel" aria-labelledby="nav-catalog-list-tab">
+                <p>
+                    <div class="table-responsive-sm">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Lista SKOS</th>
+                                    <th scope="col">Licencia</th>
+                                    <th scope="col">Idioma</th>
+                                    <th scope="col">Dominio</th>
+                                    <th scope="col">Vocabulario que las usa</th>
+                                    <th scope="col">Enlaces</th>
+                                    <th scope="col">Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </p>
+            </div>
+            <div class="tab-pane fade" id="nav-voc" role="tabpanel" aria-labelledby="nav-voc-tab">
+                    <p>
+                            <div class="table-responsive-sm">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Vocabulario</th>
+                                            <th scope="col">Prefijo</th>
+                                            <th scope="col">Serialización</th>
+                                            <th scope="col">Licencia</th>
+                                            <th scope="col">Idioma</th>
+                                            <th scope="col">Dominio</th>
+                                            <th scope="col">Enlaces</th>
+                                            <th scope="col">Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </p>
+            </div>
+        </div>
+    </div>
+</body>
+

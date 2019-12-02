@@ -1,0 +1,15 @@
+.redbg{
+    /* background: red!important; */
+    background: rgb(255,174,6);
+	background: linear-gradient(90deg, rgb(255, 201, 92) 0%, rgba(255,62,43,1) 100%);
+}
+
+#nav-tab a{
+    color: white!important;
+    background: inherit;
+}
+
+#nav-tab a:focus{
+    color: black!important;
+    background: inherit!important;
+}
