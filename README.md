@@ -1,5 +1,3 @@
-# DocumentacionSnap
+# SNAP Docs
 
-#### Site Published at 
-
-https://salva5297.github.io/DocumentacionSnap/
+Please visit https://oeg-upm.github.io/snap-docs/
