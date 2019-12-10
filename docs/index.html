@@ -1,573 +1,943 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Transmodel Vocabularies</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Transmodel Vocabularies</title>
+<meta name="generator" content="Org mode" />
+<meta name="description" content="ontologías web"
+ />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js">
+/**
+ *
+ * @source: https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js.
+ *
+ * Copyright (C) 2012-2019 Free Software Foundation, Inc.
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
 </head>
-
 <body>
-    <div class="container">
-        <h1 class="title">Transmodel Vocabularies</h1>
-        <nav class="navbar navbar-expand-md navbar-dark redbg sticky-top">
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapse_target">
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link focus " id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Description</a>
-                    <a class="nav-item nav-link" id="nav-voc-catalog-tab" data-toggle="tab" href="#nav-voc-catalog" role="tab" aria-controls="nav-voc-catalog" aria-selected="false">Vocabulary Catalog</a>
-                    <a class="nav-item nav-link" id="nav-catalog-list-tab" data-toggle="tab" href="#nav-catalog-list" role="tab" aria-controls="nav-catalog-list" aria-selected="false">SKOS lists Catalog</a>
-                    <a class="nav-item nav-link" id="nav-voc-tab" data-toggle="tab" href="#nav-voc" role="tab" aria-controls="nav-voc" aria-selected="false">Reused Vocabularies</a>
-                    <a class="nav-item nav-link" id="nav-non-ont-tab" data-toggle="tab" href="#nav-non-ont" role="tab" aria-controls="nav-non-ont" aria-selected="false">Non ontological resources</a>
-                </div>
-            </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show focus in active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
-                <p></p>
-                <p>
-                    With the ultimate goal of enabling the provision of multimodal transportation services,
-                    the <acronym title="European Union">EU</acronym> Regulation <a href="https://eur-lex.europa.eu/eli/reg_del/2017/1926/oj">2017/1926</a> is
-                    requiring transport stakeholders to allow access to their data in specific data formats
-                    (i.e., <acronym title="Network Timetable Exchange">NeTEx</acronym>,
-                    <acronym title="Service Interface for Real Time Information">SIRI</acronym>). Currently, the requested data formats are rarely
-                    used, thus a data conversion is needed.
-                </p>
-                    
-                <p>
-                    This regulation is based in the EU Directive <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1575364946186&amp;uri=CELEX:32010L0040">2010/40/EU</a> for the deploymen of Intelligent
-                    Transport Systems in the field of road transport and for interfaces with other modes of transport.
-                </p>
-                    
-                <p>
-                    The <acronym title="Semantic National Access Point">SNAP</acronym> solution
-                    supports data conversion, decreasing the time required to perform it and hiding its
-                    complexity. With <b>SNAP</b> transportation data will be compliant with the EU Regulation in a
-                    snap &#129310;
-                </p>
-                    
-                <p>
-                    Transport authorities, operators and infrastructure managers can render their legacy data
-                    interoperable and compliant with standards using a solution fit to their needs
-                </p>
-            </div>
+<div id="content">
+<h1 class="title">Transmodel Vocabularies</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2b95475">Description</a></li>
+<li><a href="#orgdc60252">Vocabulary Catalogue</a></li>
+<li><a href="#org3ad8cc9">SKOS lists Catalogue</a></li>
+<li><a href="#orgb62763f">Reused Vocabularies</a></li>
+<li><a href="#org0670ca4">Non ontological resources</a>
+<ul>
+<li><a href="#org8fc13ee">Transmodel</a></li>
+<li><a href="#orga44ea27">NeTEx</a></li>
+<li><a href="#org1ba68ea">GTFS</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 
-            <div class="tab-pane fade" id="nav-voc-catalog" role="tabpanel" aria-labelledby="nav-voc-catalog-tab">
-                <p></p>
-                <p>
-                        Below is the list of vocabularies that are being created within the SNAP Project specially
-                        for use by transit organisations or authorities but also for any other organisation which
-                        wants to make their transit data compliant with Transmodel model of the European
-                        <acronym title="Intelligent Transport Systems">ITS</title> Directive.
-                </p>
-                    
-                <div class="table-responsive-sm">
-                    <table class="table">
-                        <caption class="t-above"><span class="table-number">Table 1:</span> Modules of the Transmodel Ontology</caption>
-                        <thead class="redbg">
-                            <tr>
-                                <th scope="col">Vocabulary</th>
-                                <th scope="col">Release Date</th>
-                                <th scope="col">Prefix</th>
-                                <th scope="col">Serialisation</th>
-                                <th scope="col">Licence</th>
-                                <th scope="col">Lang</th>
-                                <th scope="col">Domain</th>
-                                <th scope="col">Links</th>
-                                <th scope="col">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                <tr>
-                                        <td><a href="./commons/index.html">Commons</a></td>
-                                        <td><span class="timestamp-wrapper"><span class="timestamp">2019-11-28</span></span></td>
-                                        <td>tmcommons</td>
-                                        <td>rdf+xml <br />html <br />turtle</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>transit</td>
-                                        <td>repository<br/>issues<br/>requirements<br/>releases</td>
-                                        <td>Commons (prefix tmcommons, <a href="https://w3id.org/transmodel/commons">https://w3id.org/transmodel/commons</a>#) to represent all those concepts and properties that are general enough to be used across all modules.</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td><a href="./facilities/index.html">Facilities</a></td>
-                                        <td><span class="timestamp-wrapper"><span class="timestamp">2019-11-28</span></span></td>
-                                        <td>tmfac</td>
-                                        <td>rdf+xml <br />html <br />turtle</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>facilities</td>
-                                        <td>repository<br/>issues<br/>requirements<br/>releases</td>
-                                        <td>Facilities (prefix tmfac, <a href="https://w3id.org/transmodel/facilities">https://w3id.org/transmodel/facilities</a>#) to represent all the information related to facilities.</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td><a href="./fares/index.html">Fares</a></td>
-                                        <td><span class="timestamp-wrapper"><span class="timestamp">2019-11-28</span></span></td>
-                                        <td>tmfares</td>
-                                        <td>rdf+xml <br />html <br />turtle</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>fares</td>
-                                        <td>repository<br/>issues<br/>requirements<br/>releases</td>
-                                        <td>Organisations (prefix tmorg, <a href="https://w3id.org/transmodel/organisations">https://w3id.org/transmodel/organisations</a>#) to represent all the information related to the public transport organisations.</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td><a href="./journeys/index.html">Journeys</a></td>
-                                        <td><span class="timestamp-wrapper"><span class="timestamp">2019-11-28</span></span></td>
-                                        <td>tmjourney</td>
-                                        <td>rdf+xml <br />html <br />turtle</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>repository<br/>issues<br/>requirements<br/>releases</td>
-                                        <td>Journeys (prefix tmjourney, <a href="https://w3id.org/transmodel/journeys">https://w3id.org/transmodel/journeys</a>#) to represent all the information related to the trips and the different types of journeys for passengers and vehicles.</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td><a href="./organisations/index.html">Organisations</a></td>
-                                        <td><span class="timestamp-wrapper"><span class="timestamp">2019-11-28</span></span></td>
-                                        <td>tmorg</td>
-                                        <td>rdf+xml <br />html <br />turtle</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>organisations</td>
-                                        <td>repository<br/>issues<br/>requirements<br/>releases</td>
-                                        <td>Organisations (prefix tmorg, <a href="https://w3id.org/transmodel/organisations">https://w3id.org/transmodel/organisations</a>#) to represent all the information related to the public transport organisations.</td>
-                                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+<div id="outline-container-org2b95475" class="outline-2">
+<h2 id="org2b95475">Description</h2>
+<div class="outline-text-2" id="text-org2b95475">
+<p>
+With the ultimate goal of enabling the provision of multimodal transportation services,
+the <abbr title="European Union">EU</abbr> Regulation <a href="https://eur-lex.europa.eu/eli/reg_del/2017/1926/oj">2017/1926</a> is
+requiring transport stakeholders to allow access to their data in specific data formats
+(i.e., <abbr title="Network Timetable Exchange">NeTEx</abbr>,
+<abbr title="Service Interface for Real Time
+Information">SIRI</abbr>). Currently, the requested data formats are rarely
+used, thus a data conversion is needed.
+</p>
+
+<p>
+This regulation is based in the EU Directive <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1575364946186&amp;uri=CELEX:32010L0040">2010/40/EU</a> for the deploymen of Intelligent
+Transport Systems in the field of road transport and for interfaces with other modes of transport.
+</p>
+
+<p>
+The <abbr title="Semantic National Access Point">SNAP</abbr> solution
+supports data conversion, decreasing the time required to perform it and hiding its
+complexity. With <b>SNAP</b> transportation data will be compliant with the EU Regulation in a
+snap.
+</p>
+
+<p>
+Transport authorities, operators and infrastructure managers can render their legacy data
+interoperable and compliant with standards using a solution fit to their needs
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc60252" class="outline-2">
+<h2 id="orgdc60252">Vocabulary Catalogue</h2>
+<div class="outline-text-2" id="text-orgdc60252">
+<p>
+Below is the list of vocabularies that are being created within the SNAP Project specially
+for use by transit organisations or authorities but also for any other organisation which
+wants to make their transit data compliant with Transmodel model of the European
+<abbr title="Intelligent Transport Systems">ITS</abbr> Directive.
+</p>
 
 
-            <div class="tab-pane fade" id="nav-catalog-list" role="tabpanel" aria-labelledby="nav-catalog-list-tab">
-                <p></p>
-                <p>
-                    This is the catalog of the SKOS list generated as part of the development of the
-                    Transmodel Ontology.</p>
-                <div class="table-responsive-sm">
-                    <table class="table">
-                        <caption class="t-above"><span class="table-number">Table 2:</span> SKOS list Catalog</caption>
-                        <thead class="redbg">
-                            <tr>
-                                <th scope="col">SKOS List</th>
-                                <th scope="col">Licence</th>
-                                <th scope="col">Lang</th>
-                                <th scope="col">Domain</th>
-                                <th scope="col">isUsed in Vocab</th>
-                                <th scope="col">Links</th>
-                                <th scope="col">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                                <tr>
-                                        <td>all-modes</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>commons</td>
-                                        <td>commons</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/all-modes.ttl">all-modes.ttl</a></td>
-                                        <td>Allowed values for Vehicle Mode</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>continuous-mode</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>commons</td>
-                                        <td>commons</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/continuous-mode.ttl">continuous-mode.ttl</a></td>
-                                        <td>Allowed values for Continuous Mode</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>road-vehicle-mode</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>commons</td>
-                                        <td>commons</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/road-vehicle-mode.ttl">road-vehicle-mode.ttl</a></td>
-                                        <td>Allowed values for Road Vehicle Mode</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>sites-access-mode</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>commons</td>
-                                        <td>commons</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/sites-access-mode.ttl">sites-access-mode.ttl</a></td>
-                                        <td>Allowed values for Site Access Mode</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>vehicle-mode</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>commons</td>
-                                        <td>commons</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/vehicle-mode.ttl">vehicle-mode.ttl</a></td>
-                                        <td>Allowed values for modes of Public Transport applicable to timetabled public transport</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>facilities.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>facilities</td>
-                                        <td>facilities</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/facilities.ttl">facilities.ttl</a></td>
-                                        <td>Codelist of types of facilities</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>organisation-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>organisations</td>
-                                        <td>organisations</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/organisations/organisation-type.ttl">organisation-type.ttl</a></td>
-                                        <td>Codelist of types of organisations</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>organisation-role-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>organisations</td>
-                                        <td>organisations</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/organisations/responsability-role-type.ttl">responsability-role-type.ttl</a></td>
-                                        <td>Codelist of types of responsability roles</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>day-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/day-type.ttl">day-type.ttl</a></td>
-                                        <td>Enumeration of Types of Days</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>direction-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/direction-type.ttl">direction-type.ttl</a></td>
-                                        <td>Allowed values for Direction Types</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>entrance-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/entrance-type.ttl">entrance-type.ttl</a></td>
-                                        <td>Allowed values for Entrance Types</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>interchange-weighting-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/interchange-weighting-type.ttl">interchange-weighting-type.ttl</a></td>
-                                        <td>Allowed values for Interchange Weighting Type</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>limited-use-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/limited-use-type.ttl">limited-use-type.ttl</a></td>
-                                        <td>Allowed values for Limited Use Type</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>mobility-limitation.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/mobility-limitation.ttl">mobility-limitation.ttl</a></td>
-                                        <td>Allowed values for Mobility Limitation</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>quay-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/quay-type.ttl">quay-type.ttl</a></td>
-                                        <td>Allowed values for Quay Type</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>stop-place-component-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-place-component-type.ttl">stop-component-type.ttl</a></td>
-                                        <td>Allowed values for Stop Component Type</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>stop-place.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-place.ttl">stop-place.ttl</a></td>
-                                        <td>Allowed values for Stop Place</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>stop-use-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>journeys</td>
-                                        <td>journeys</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-use-type.ttl">stop-use-type.ttl</a></td>
-                                        <td>Allowed values for Stop Use Type</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>booking-access-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>fares</td>
-                                        <td>fares</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/booking-access-type.ttl">booking-access-type.ttl</a></td>
-                                        <td>Allowed values for Booking Access Type</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>booking-method-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>fares</td>
-                                        <td>fares</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/booking-method-type.ttl">booking-method-type.ttl</a></td>
-                                        <td>Allowed values for Booking Method Type</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>distribution-channel-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>fares</td>
-                                        <td>fares</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/distribution-channel-type.ttl">distribution-channel-type.ttl</a></td>
-                                        <td>Allowed values for Distribution Channel Type</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>distribution-rights.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>fares</td>
-                                        <td>fares</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/distribution-rights.ttl">distribution-rights.ttl</a></td>
-                                        <td>Allowed values for Distribution Rights</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                        <td>fulfilment-method-type.ttl</td>
-                                        <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                        <td>en</td>
-                                        <td>fares</td>
-                                        <td>fares</td>
-                                        <td><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/fulfilment-method-type.ttl">fulfilment-method-type.ttl</a></td>
-                                        <td>Allowed values for Fulfilment Method Type</td>
-                                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+<table id="orgdd84888" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Modules of the Transmodel Ontology</caption>
 
-            <div class="tab-pane fade" id="nav-voc" role="tabpanel" aria-labelledby="nav-voc-tab">
-                <p></p>
-                <p>
-                    Below is a list of vocabularies that are reused within the Transmodel Ontology. It is
-                    important to mention that for the development of these vocabularies, the methodology being
-                    used for this project has not been explicitly followed. Therefore, there is no
-                    documentation available related to Use Cases, User Stories, etc.
-                </p>
-                <div class="table-responsive-sm">
-                    <table class="table">
-                        <caption class="t-above"><span class="table-number">Table 3:</span> Reused Vocabularies</caption>
-                        <thead class="redbg">
-                            <tr>
-                                <th scope="col">Vocabulary</th>
-                                <th scope="col">Prefix</th>
-                                <th scope="col">Serialisation</th>
-                                <th scope="col">License</th>
-                                <th scope="col">Lang</th>
-                                <th scope="col">Domain</th>
-                                <th scope="col">Links</th>
-                                <th scope="col">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>W3C Organization</td>
-                                <td>vocab-org</td>
-                                <td>rdf+xml <br />html <br />turtle</td>
-                                <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                <td>en</td>
-                                <td>organisation</td>
-                                <td><a href="http://www.w3.org/ns/org#">org</a></td>
-                                <td>W3C Organization Ontology used in the ontology module focused on Organisations</td>
-                                </tr>
-                                
-                                <tr>
-                                <td>W3C Geo WSS84</td>
-                                <td>geo</td>
-                                <td>rdf+xml <br />html <br />turtle</td>
-                                <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                <td>en</td>
-                                <td>journeys</td>
-                                <td><a href="https://www.w3.org/2003/01/geo/">geo</a></td>
-                                <td>W3C Geo WGS84 Ontology used used for the representation of latitude and longitude data about points.</td>
-                                </tr>
-                                
-                                <tr>
-                                <td>Dublin Core</td>
-                                <td>dc</td>
-                                <td>rdf+xml <br />html <br />turtle</td>
-                                <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                <td>en</td>
-                                <td>organisations</td>
-                                <td><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/">dc</a></td>
-                                <td>General ontologies like Dublin Core for the representation of basic properties such as identifiers.</td>
-                                </tr>
-                                
-                                <tr>
-                                <td>Schema</td>
-                                <td>schema</td>
-                                <td>rdf+xml <br />html <br />turtle</td>
-                                <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                <td>en</td>
-                                <td>organisations</td>
-                                <td><a href="http://schema.org/docs/documents.html">schema</a></td>
-                                <td>Schema is used in the ontology module focused on Organisations</td>
-                                </tr>
-                                
-                                <tr>
-                                <td>FOAF</td>
-                                <td>foaf</td>
-                                <td>rdf+xml <br />html <br />turtle</td>
-                                <td><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                <td>en</td>
-                                <td>organisations</td>
-                                <td><a href="http://xmlns.com/foaf/0.1/">foaf</a></td>
-                                <td>FOAF is used in the ontology module focused on Organisations.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-non-ont" role="tabpanel" aria-labelledby="nav-voc-non-ont">
-                <p></p>
-                <div>
-                <p>
-                        It is important to note that, according to the used existing ontology engineering
-                        methodology, and as recorded commonly in other ontology engineering methodologies as well,
-                        these non-ontological resources have gone through an extensive process of reengineering so
-                        as to avoid the biases that may have a negative impact on the resulting ontologies.
-                        </p>
-                        
-                        <p>
-                        This is due to the fact that the choice of implementation (UML, XML and CSV, respectively)
-                        usually generates modelling biases, especially when it comes to representing the names of
-                        properties (local vs global names), n-ary relations, enumerations that can be converted
-                        into thesauri or controlled lists of codes, etc. Therefore, the process of reengineering
-                        has focused on eliminating as many of these biases as possible so as to generate a model
-                        that is <b>sufficiently rich</b> in terms of <b>expressiveness</b> and makes a natural usage of the
-                        ontology modelling language OWL, which is the one commonly used for ontology
-                        implementation nowadays.
-                        </p>
-                        
-                        <p>
-                        Three are the resources which have helped into the implementation of the Transmodel
-                        Ontology: the Transmodel model (UML), the NeTEx standard (XML Schema) and de GTFS model (CSV).
-                        </p>
-                        </div>
-                        
-                        <ul class="org-ul">
-                        <li><a id="orgcbdfdaa"></a>Transmodel<br />
-                        <div class="outline-text-3" id="text-orgcbdfdaa">
-                        <p>
-                        The <a href="http://www.transmodel-cen.eu/">Transmodel model</a> is the <acronym title="Comité Européen de Normalisation">CEN</acronym> (<a href="https://www.cen.eu/Pages/default.aspx">European Committee for Standardization</a>)  European
-                        Reference Data Model for Public Transport Information. As discussed in the corresponding
-                        website, it provides "an abstract model of common public transport concepts and data
-                        structures that can be used to build many different kinds of public transport information
-                        system, including timetabling, fares, operational management, real time data, journey
-                        planning etc".
-                        </p>
-                        
-                        <p>
-                        The Transmodel (version 6, 2017) is made available in UML and browsable and downloadable
-                        from its <a href="http://www.transmodel-cen.eu/downloads/">downloads</a> section.
-                        </p>
-                        </div>
-                        </li>
-                        
-                        <li><a id="org98cffed"></a>NeTEx<br />
-                        <div class="outline-text-3" id="text-org98cffed">
-                        <p>
-                        The NeTEx (public transport Network Timetable Exchange) is another CEN standard for the
-                        interoperable exchange of public transport passenger information between systems. It is
-                        implemented in XML schema, with its latest version (v1.09) being available at <a href="https://github.com/NeTEx-CEN/NeTEx">Github</a>. The
-                        functional scope of NeTEx is divided into three parts, each covering a functional subset
-                        of Transmodel: Part 1 describes the fixed Network (stops, routes, lines, etc.); Part 2 is
-                        mainly focused on Timetables; and Part 3 covers Fare data.
-                        </p>
-                        </div>
-                        </li>
-                        
-                        <li><a id="orge240e4d"></a>GTFS<br />
-                        <div class="outline-text-3" id="text-orge240e4d">
-                        <p>
-                        The <a href="https://developers.google.com/transit/gtfs/reference/">GTFS</a> (General Transit Feed Specification) model is a format proposed by Google for the
-                        representation of public transportation schedules and associated geographic information,
-                        which has become a de facto standard for the publication of the information on public
-                        transport that can be used to provide trip planning functionality.
-                        </p>
-                        
-                        <p>
-                        The last version of the <a href="https://gtfs.org/reference/static">GTFS feed</a> (revised January 17, 2019) consists of a collection of
-                        at least 5, 2 conditionally required and up to 15 CSV files contained within a .zip file,
-                        which describe together a transit system's scheduled operations as visible to riders. It
-                        is focused on scheduled information and does not include real-time information, for which
-                        there is the GTFS-realtime specification.
-                        </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            </div>       
-            </div>
-        </div>
-    </div>
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Vocabulary</th>
+<th scope="col" class="org-left">Release Date</th>
+<th scope="col" class="org-left">Prefix</th>
+<th scope="col" class="org-left">Serialisation</th>
+<th scope="col" class="org-left">Licence</th>
+<th scope="col" class="org-left">Lang</th>
+<th scope="col" class="org-left">Domain</th>
+<th scope="col" class="org-left">Links</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="./tm-commons.owl/documentation/index-en.html">Commons</a></td>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-11-28 Thu&gt;</span></span></td>
+<td class="org-left">tmcommons</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">transit</td>
+<td class="org-left"><a href="https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-commons.owl">repository</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/labels/commons">issues</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions">requirements</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/releases">releases</a></td>
+<td class="org-left">Commons module (prefix tmcommons, <a href="https://w3id.org/transmodel/commons">https://w3id.org/transmodel/commons</a>#) to represent all those concepts and properties that are general enough to be used across all modules.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="./tm-facilities.owl/documentation/index-en.html">Facilities</a></td>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-11-28 Thu&gt;</span></span></td>
+<td class="org-left">tmfac</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">facilities</td>
+<td class="org-left"><a href="https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-facilities.owl">repository</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/labels/facilities">issues</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions">requirements</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/releases">releases</a></td>
+<td class="org-left">Facilities module (prefix tmfac, <a href="https://w3id.org/transmodel/facilities">https://w3id.org/transmodel/facilities</a>#) to represent all the information related to facilities.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="./tm-fares.owl/documentation/index-en.html">Fares</a></td>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-11-28 Thu&gt;</span></span></td>
+<td class="org-left">tmfares</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">fares</td>
+<td class="org-left"><a href="https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-fares.owl">repository</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/labels/fares">issues</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions">requirements</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/releases">releases</a></td>
+<td class="org-left">Organisations module (prefix tmorg, <a href="https://w3id.org/transmodel/organisations">https://w3id.org/transmodel/organisations</a>#) to represent all the information related to the public transport organisations.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="./tm-journeys.owl/documentation/index-en.html">Journeys</a></td>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-11-28 Thu&gt;</span></span></td>
+<td class="org-left">tmjourney</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-journeys.owl">repository</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/labels/journeys">issues</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions">requirements</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/releases">releases</a></td>
+<td class="org-left">Journeys module (prefix tmjourney, <a href="https://w3id.org/transmodel/journeys">https://w3id.org/transmodel/journeys</a>#) to represent all the information related to the trips and the different types of journeys for passengers and vehicles.</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="./tm-organisations.owl/documentation/index-en.html">Organisations</a></td>
+<td class="org-left"><span class="timestamp-wrapper"><span class="timestamp">&lt;2019-11-28 Thu&gt;</span></span></td>
+<td class="org-left">tmorg</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">organisations</td>
+<td class="org-left"><a href="https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-org.owl">repository</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/labels/organisations">issues</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions">requirements</a><br/><a href="https://github.com/oeg-upm/transmodel-ontology/releases">releases</a></td>
+<td class="org-left">Organisations module (prefix tmorg, <a href="https://w3id.org/transmodel/organisations">https://w3id.org/transmodel/organisations</a>#) to represent all the information related to the public transport organisations.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org3ad8cc9" class="outline-2">
+<h2 id="org3ad8cc9">SKOS lists Catalogue</h2>
+<div class="outline-text-2" id="text-org3ad8cc9">
+<p>
+This is the catalogue of the SKOS list generated as part of the development of the
+Transmodel Ontology.
+</p>
+
+<table id="org2ab17a2" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> SKOS list Catalogue</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">SKOS List</th>
+<th scope="col" class="org-left">Licence</th>
+<th scope="col" class="org-left">Lang</th>
+<th scope="col" class="org-left">Domain</th>
+<th scope="col" class="org-left">isUsed in Vocab</th>
+<th scope="col" class="org-left">Links</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">all-modes</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">commons</td>
+<td class="org-left">commons</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/all-modes.ttl">all-modes.ttl</a></td>
+<td class="org-left">Allowed values for Vehicle Mode</td>
+</tr>
+
+<tr>
+<td class="org-left">continuous-mode</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">commons</td>
+<td class="org-left">commons</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/continuous-mode.ttl">continuous-mode.ttl</a></td>
+<td class="org-left">Allowed values for Continuous Mode</td>
+</tr>
+
+<tr>
+<td class="org-left">road-vehicle-mode</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">commons</td>
+<td class="org-left">commons</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/road-vehicle-mode.ttl">road-vehicle-mode.ttl</a></td>
+<td class="org-left">Allowed values for Road Vehicle Mode</td>
+</tr>
+
+<tr>
+<td class="org-left">sites-access-mode</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">commons</td>
+<td class="org-left">commons</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/sites-access-mode.ttl">sites-access-mode.ttl</a></td>
+<td class="org-left">Allowed values for Site Access Mode</td>
+</tr>
+
+<tr>
+<td class="org-left">vehicle-mode</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">commons</td>
+<td class="org-left">commons</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/vehicle-mode.ttl">vehicle-mode.ttl</a></td>
+<td class="org-left">Allowed values for modes of Public Transport applicable to timetabled public transport</td>
+</tr>
+
+<tr>
+<td class="org-left">facilities.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">facilities</td>
+<td class="org-left">facilities</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/facilities.ttl">facilities.ttl</a></td>
+<td class="org-left">Codelist of types of facilities</td>
+</tr>
+
+<tr>
+<td class="org-left">organisation-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">organisations</td>
+<td class="org-left">organisations</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/organisations/organisation-type.ttl">organisation-type.ttl</a></td>
+<td class="org-left">Codelist of types of organisations</td>
+</tr>
+
+<tr>
+<td class="org-left">organisation-role-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">organisations</td>
+<td class="org-left">organisations</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/organisations/responsability-role-type.ttl">responsability-role-type.ttl</a></td>
+<td class="org-left">Codelist of types of responsability roles</td>
+</tr>
+
+<tr>
+<td class="org-left">day-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/day-type.ttl">day-type.ttl</a></td>
+<td class="org-left">Enumeration of Types of Days</td>
+</tr>
+
+<tr>
+<td class="org-left">direction-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/direction-type.ttl">direction-type.ttl</a></td>
+<td class="org-left">Allowed values for Direction Types</td>
+</tr>
+
+<tr>
+<td class="org-left">entrance-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/entrance-type.ttl">entrance-type.ttl</a></td>
+<td class="org-left">Allowed values for Entrance Types</td>
+</tr>
+
+<tr>
+<td class="org-left">interchange-weighting-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/interchange-weighting-type.ttl">interchange-weighting-type.ttl</a></td>
+<td class="org-left">Allowed values for Interchange Weighting Type</td>
+</tr>
+
+<tr>
+<td class="org-left">limited-use-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/limited-use-type.ttl">limited-use-type.ttl</a></td>
+<td class="org-left">Allowed values for Limited Use Type</td>
+</tr>
+
+<tr>
+<td class="org-left">mobility-limitation.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/mobility-limitation.ttl">mobility-limitation.ttl</a></td>
+<td class="org-left">Allowed values for Mobility Limitation</td>
+</tr>
+
+<tr>
+<td class="org-left">quay-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/quay-type.ttl">quay-type.ttl</a></td>
+<td class="org-left">Allowed values for Quay Type</td>
+</tr>
+
+<tr>
+<td class="org-left">stop-place-component-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-place-component-type.ttl">stop-component-type.ttl</a></td>
+<td class="org-left">Allowed values for Stop Component Type</td>
+</tr>
+
+<tr>
+<td class="org-left">stop-place.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-place.ttl">stop-place.ttl</a></td>
+<td class="org-left">Allowed values for Stop Place</td>
+</tr>
+
+<tr>
+<td class="org-left">stop-use-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-use-type.ttl">stop-use-type.ttl</a></td>
+<td class="org-left">Allowed values for Stop Use Type</td>
+</tr>
+
+<tr>
+<td class="org-left">booking-access-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">fares</td>
+<td class="org-left">fares</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/booking-access-type.ttl">booking-access-type.ttl</a></td>
+<td class="org-left">Allowed values for Booking Access Type</td>
+</tr>
+
+<tr>
+<td class="org-left">booking-method-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">fares</td>
+<td class="org-left">fares</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/booking-method-type.ttl">booking-method-type.ttl</a></td>
+<td class="org-left">Allowed values for Booking Method Type</td>
+</tr>
+
+<tr>
+<td class="org-left">distribution-channel-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">fares</td>
+<td class="org-left">fares</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/distribution-channel-type.ttl">distribution-channel-type.ttl</a></td>
+<td class="org-left">Allowed values for Distribution Channel Type</td>
+</tr>
+
+<tr>
+<td class="org-left">distribution-rights.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">fares</td>
+<td class="org-left">fares</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/distribution-rights.ttl">distribution-rights.ttl</a></td>
+<td class="org-left">Allowed values for Distribution Rights</td>
+</tr>
+
+<tr>
+<td class="org-left">fulfilment-method-type.ttl</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">fares</td>
+<td class="org-left">fares</td>
+<td class="org-left"><a href="https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/fulfilment-method-type.ttl">fulfilment-method-type.ttl</a></td>
+<td class="org-left">Allowed values for Fulfilment Method Type</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgb62763f" class="outline-2">
+<h2 id="orgb62763f">Reused Vocabularies</h2>
+<div class="outline-text-2" id="text-orgb62763f">
+<p>
+Below is a list of vocabularies that are reused within the Transmodel Ontology. It is
+important to mention that for the development of these vocabularies, the methodology being
+used for this project has not been explicitly followed. Therefore, there is no
+documentation available related to Use Cases, User Stories, etc.
+</p>
+
+<table id="orgadb1d46" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 3:</span> Reused Vocabularies</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Vocabulary</th>
+<th scope="col" class="org-left">Prefix</th>
+<th scope="col" class="org-left">Serialisation</th>
+<th scope="col" class="org-left">License</th>
+<th scope="col" class="org-left">Lang</th>
+<th scope="col" class="org-left">Domain</th>
+<th scope="col" class="org-left">Links</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">W3C Organization</td>
+<td class="org-left">vocab-org</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">organisation</td>
+<td class="org-left"><a href="http://www.w3.org/ns/org#">org</a></td>
+<td class="org-left">W3C Organization Ontology used in the ontology module focused on Organisations</td>
+</tr>
+
+<tr>
+<td class="org-left">W3C Geo WSS84</td>
+<td class="org-left">geo</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">journeys</td>
+<td class="org-left"><a href="https://www.w3.org/2003/01/geo/">geo</a></td>
+<td class="org-left">W3C Geo WGS84 Ontology used used for the representation of latitude and longitude data about points.</td>
+</tr>
+
+<tr>
+<td class="org-left">Dublin Core</td>
+<td class="org-left">dc</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">organisations</td>
+<td class="org-left"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/">dc</a></td>
+<td class="org-left">General ontologies like Dublin Core for the representation of basic properties such as identifiers.</td>
+</tr>
+
+<tr>
+<td class="org-left">Schema</td>
+<td class="org-left">schema</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">organisations</td>
+<td class="org-left"><a href="http://schema.org/docs/documents.html">schema</a></td>
+<td class="org-left">Schema is used in the ontology module focused on Organisations</td>
+</tr>
+
+<tr>
+<td class="org-left">FOAF</td>
+<td class="org-left">foaf</td>
+<td class="org-left">rdf+xml <br />html <br />turtle</td>
+<td class="org-left"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+<td class="org-left">en</td>
+<td class="org-left">organisations</td>
+<td class="org-left"><a href="http://xmlns.com/foaf/0.1/">foaf</a></td>
+<td class="org-left">FOAF is used in the ontology module focused on Organisations.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org0670ca4" class="outline-2">
+<h2 id="org0670ca4">Non ontological resources</h2>
+<div class="outline-text-2" id="text-org0670ca4">
+<p>
+It is important to note that, according to the used existing ontology engineering
+methodology, and as recorded commonly in other ontology engineering methodologies as well,
+these non-ontological resources have gone through an extensive process of reengineering so
+as to avoid the biases that may have a negative impact on the resulting ontologies.
+</p>
+
+<p>
+This is due to the fact that the choice of implementation (UML, XML and CSV, respectively)
+usually generates modelling biases, especially when it comes to representing the names of
+properties (local vs global names), n-ary relations, enumerations that can be converted
+into thesauri or controlled lists of codes, etc. Therefore, the process of reengineering
+has focused on eliminating as many of these biases as possible so as to generate a model
+that is <b>sufficiently rich</b> in terms of <b>expressiveness</b> and makes a natural usage of the
+ontology modelling language OWL, which is the one commonly used for ontology
+implementation nowadays.
+</p>
+
+<p>
+Three are the resources which have helped into the implementation of the Transmodel
+Ontology: the Transmodel model (UML), the NeTEx standard (XML Schema) and de GTFS model (CSV).
+</p>
+</div>
+
+<div id="outline-container-org8fc13ee" class="outline-3">
+<h3 id="org8fc13ee">Transmodel</h3>
+<div class="outline-text-3" id="text-org8fc13ee">
+<p>
+The <a href="http://www.transmodel-cen.eu/">Transmodel model</a> is the <abbr title="Comité Européen de Normalisation">CEN</abbr> (<a href="https://www.cen.eu/Pages/default.aspx">European Committee for Standardization</a>)  European
+Reference Data Model for Public Transport Information. As discussed in the corresponding
+website, it provides "an abstract model of common public transport concepts and data
+structures that can be used to build many different kinds of public transport information
+system, including timetabling, fares, operational management, real time data, journey
+planning etc".
+</p>
+
+<p>
+The Transmodel (version 6, 2017) is made available in UML and browsable and downloadable
+from its <a href="http://www.transmodel-cen.eu/downloads/">downloads</a> section.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga44ea27" class="outline-3">
+<h3 id="orga44ea27">NeTEx</h3>
+<div class="outline-text-3" id="text-orga44ea27">
+<p>
+The NeTEx (public transport Network Timetable Exchange) is another CEN standard for the
+interoperable exchange of public transport passenger information between systems. It is
+implemented in XML schema, with its latest version (v1.09) being available at <a href="https://github.com/NeTEx-CEN/NeTEx">Github</a>. The
+functional scope of NeTEx is divided into three parts, each covering a functional subset
+of Transmodel: Part 1 describes the fixed Network (stops, routes, lines, etc.); Part 2 is
+mainly focused on Timetables; and Part 3 covers Fare data.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ba68ea" class="outline-3">
+<h3 id="org1ba68ea">GTFS</h3>
+<div class="outline-text-3" id="text-org1ba68ea">
+<p>
+The <a href="https://developers.google.com/transit/gtfs/reference/">GTFS</a> (General Transit Feed Specification) model is a format proposed by Google for the
+representation of public transportation schedules and associated geographic information,
+which has become a de facto standard for the publication of the information on public
+transport that can be used to provide trip planning functionality.
+</p>
+
+<p>
+The last version of the <a href="https://gtfs.org/reference/static">GTFS feed</a> (revised January 17, 2019) consists of a collection of
+at least 5, 2 conditionally required and up to 15 CSV files contained within a .zip file,
+which describe together a transit system's scheduled operations as visible to riders. It
+is focused on scheduled information and does not include real-time information, for which
+there is the GTFS-realtime specification.
+</p>
+</div>
+</div>
+</div>
+</div>
 </body>
+</html>
