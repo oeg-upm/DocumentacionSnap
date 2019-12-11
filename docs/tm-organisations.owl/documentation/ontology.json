@@ -12,10 +12,10 @@
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#governedBy"
+    "@id" : "https://w3id.org/transmodel/organisations#governedBy"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -49,7 +49,7 @@
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/authorities/OrganisationType"
+    "@id" : "https://w3id.org/transmodel/kos/organisations/OrganisationType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -58,7 +58,7 @@
   "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+    "@id" : "https://w3id.org/transmodel/organisations#OrganisationPart"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/org#hasUnit"
@@ -67,10 +67,10 @@
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ContactDetails"
+    "@id" : "https://w3id.org/transmodel/organisations#ContactDetails"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#characterisedBy"
+    "@id" : "https://w3id.org/transmodel/organisations#characterisedBy"
   } ]
 }, {
   "@id" : "_:genid20",
@@ -79,15 +79,15 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#language"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#language"
+    "@id" : "https://w3id.org/transmodel/organisations#language"
   } ]
 }, {
   "@id" : "_:genid21",
-  "https://w3id.org/transmodel/authorities#mbox" : [ {
+  "https://w3id.org/transmodel/organisations#mbox" : [ {
     "@language" : "en",
     "@value" : "adolfo.anton.bravo@upm.es"
   } ],
-  "https://w3id.org/transmodel/authorities#name" : [ {
+  "https://w3id.org/transmodel/organisations#name" : [ {
     "@language" : "en",
     "@value" : "Adolfo Anton-Bravo"
   } ]
@@ -95,7 +95,7 @@
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/authorities/DistributionChannelType"
+    "@id" : "https://w3id.org/transmodel/kos/organisations/DistributionChannelType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -104,10 +104,10 @@
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ContactDetails"
+    "@id" : "https://w3id.org/transmodel/organisations#ContactDetails"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#describedThrough"
+    "@id" : "https://w3id.org/transmodel/organisations#describedThrough"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -116,7 +116,7 @@
     "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#distributionChannelType"
+    "@id" : "https://w3id.org/transmodel/organisations#distributionChannelType"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -132,7 +132,7 @@
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/authorities/DistributionChannelType"
+    "@id" : "https://w3id.org/transmodel/kos/organisations/DistributionChannelType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -183,7 +183,7 @@
   "@id" : "http://www.w3.org/ns/org#classification",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#",
+  "@id" : "https://w3id.org/transmodel/organisations#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://creativecommons.org/ns#license" : [ {
     "@id" : "http://creativecommons.org/licenses/by/4.0/"
@@ -198,31 +198,31 @@
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
-    "@value" : "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    "@value" : "Module of the Transmodel Ontology focused on organisations. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
   } ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
-    "@value" : "https://w3id.org/transmodel/authorities"
+    "@value" : "https://w3id.org/transmodel/organisations"
   } ],
   "http://purl.org/dc/elements/1.1/rights" : [ {
     "@value" : "Creative Commons Attribution 4.0 International (CC BY 4.0)"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@language" : "en",
-    "@value" : "Transmodel Ontology - Authorities"
+    "@value" : "Transmodel Ontology - Organisations"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    "@value" : "Module of the Transmodel Ontology focused on organisations. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
   }, {
     "@language" : "en",
-    "@value" : "TODO: Check whether this ontology should be better renamed to Organisations, as it refers to more things than authorities."
+    "@value" : "TODO: Check whether this ontology should be better renamed to Organisations, as it refers to more things than organisations."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Transmodel Ontology - Authorities"
+    "@value" : "Transmodel Ontology - Organisations"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -232,14 +232,14 @@
     "@id" : "http://www.w3.org/ns/org#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities/0.2"
+    "@id" : "https://w3id.org/transmodel/organisations/0.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "This is the initial version of the module on Authorities, after considering the UML models and XSD descriptions of Transmodel and NeTEx"
+    "@value" : "This is the initial version of the module on Organisations, after considering the UML models and XSD descriptions of Transmodel and NeTEx"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone",
+  "@id" : "https://w3id.org/transmodel/organisations#AdministrativeZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -250,10 +250,10 @@
     "@value" : "AdministrativeZone"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Zone"
+    "@id" : "https://w3id.org/transmodel/organisations#Zone"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#Authority",
+  "@id" : "https://w3id.org/transmodel/organisations#Authority",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -264,13 +264,13 @@
     "@value" : "Authority"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ContactDetails",
+  "@id" : "https://w3id.org/transmodel/organisations#ContactDetails",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -284,7 +284,7 @@
     "@id" : "http://schema.org/ContactPoint"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ControlCenter",
+  "@id" : "https://w3id.org/transmodel/organisations#ControlCenter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -295,10 +295,10 @@
     "@value" : "ControlCentre"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+    "@id" : "https://w3id.org/transmodel/organisations#OrganisationPart"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#CrewBase",
+  "@id" : "https://w3id.org/transmodel/organisations#CrewBase",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -309,10 +309,10 @@
     "@value" : "CrewBase"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#Department",
+  "@id" : "https://w3id.org/transmodel/organisations#Department",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -323,10 +323,10 @@
     "@value" : "Department"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+    "@id" : "https://w3id.org/transmodel/organisations#OrganisationPart"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#DistributionChannel",
+  "@id" : "https://w3id.org/transmodel/organisations#DistributionChannel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -344,17 +344,17 @@
     "@id" : "_:genid11"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#Employee",
+  "@id" : "https://w3id.org/transmodel/organisations#Employee",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Employee"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#GroupOfOperators",
+  "@id" : "https://w3id.org/transmodel/organisations#GroupOfOperators",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -365,10 +365,10 @@
     "@value" : "GroupOfOperators"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#Operator",
+  "@id" : "https://w3id.org/transmodel/organisations#Operator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -379,13 +379,13 @@
     "@value" : "Operator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#Organisation",
+  "@id" : "https://w3id.org/transmodel/organisations#Organisation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -415,7 +415,7 @@
     "@id" : "_:genid20"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart",
+  "@id" : "https://w3id.org/transmodel/organisations#OrganisationPart",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -429,7 +429,7 @@
     "@id" : "http://www.w3.org/ns/org#OrganizationalUnit"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#OrganisationUnit",
+  "@id" : "https://w3id.org/transmodel/organisations#OrganisationUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -440,10 +440,10 @@
     "@value" : "OrganisationalUnit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+    "@id" : "https://w3id.org/transmodel/organisations#OrganisationPart"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#Parking",
+  "@id" : "https://w3id.org/transmodel/organisations#Parking",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -454,10 +454,10 @@
     "@value" : "Parking"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ParkingArea",
+  "@id" : "https://w3id.org/transmodel/organisations#ParkingArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -468,10 +468,10 @@
     "@value" : "ParkingArea"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ParkingComponent"
+    "@id" : "https://w3id.org/transmodel/organisations#ParkingComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ParkingBay",
+  "@id" : "https://w3id.org/transmodel/organisations#ParkingBay",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -482,10 +482,10 @@
     "@value" : "ParkingBay"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ParkingComponent"
+    "@id" : "https://w3id.org/transmodel/organisations#ParkingComponent"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ParkingComponent",
+  "@id" : "https://w3id.org/transmodel/organisations#ParkingComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -496,10 +496,10 @@
     "@value" : "ParkingComponent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ParkingEntrance",
+  "@id" : "https://w3id.org/transmodel/organisations#ParkingEntrance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -510,10 +510,10 @@
     "@value" : "ParkingEntrance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers",
+  "@id" : "https://w3id.org/transmodel/organisations#ParkingEntranceForPassengers",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -524,10 +524,10 @@
     "@value" : "ParkingEntranceForPassengers"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ParkingEntrance"
+    "@id" : "https://w3id.org/transmodel/organisations#ParkingEntrance"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles",
+  "@id" : "https://w3id.org/transmodel/organisations#ParkingEntranceForVehicles",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -538,10 +538,10 @@
     "@value" : "ParkingEntranceForVehicles"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ParkingEntrance"
+    "@id" : "https://w3id.org/transmodel/organisations#ParkingEntrance"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ServiceArea",
+  "@id" : "https://w3id.org/transmodel/organisations#ServiceArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -552,10 +552,10 @@
     "@value" : "ServiceArea"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ServicedOrganisation",
+  "@id" : "https://w3id.org/transmodel/organisations#ServicedOrganisation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -569,13 +569,13 @@
     "@id" : "http://xmlns.com/foaf/0.1/Organization"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED",
+  "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED_parkingCapacity",
+  "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED_parkingCapacity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Parking"
+    "@id" : "https://w3id.org/transmodel/organisations#Parking"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -585,7 +585,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#Zone",
+  "@id" : "https://w3id.org/transmodel/organisations#Zone",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -596,36 +596,36 @@
     "@value" : "Zone"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#author",
+  "@id" : "https://w3id.org/transmodel/organisations#author",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#characterisedBy",
+  "@id" : "https://w3id.org/transmodel/organisations#characterisedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "This property relates an Organisation with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "characterised by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ContactDetails"
+    "@id" : "https://w3id.org/transmodel/organisations#ContactDetails"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://schema.org/contactPoint"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#creator",
+  "@id" : "https://w3id.org/transmodel/organisations#creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#describedThrough",
+  "@id" : "https://w3id.org/transmodel/organisations#describedThrough",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -639,25 +639,25 @@
     "@value" : "described through"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ContactDetails"
+    "@id" : "https://w3id.org/transmodel/organisations#ContactDetails"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://schema.org/contactPoint"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#description",
+  "@id" : "https://w3id.org/transmodel/organisations#description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#MeetingPointService"
+    "@id" : "https://w3id.org/transmodel/organisations#MeetingPointService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#distributionChannelType",
+  "@id" : "https://w3id.org/transmodel/organisations#distributionChannelType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#DistributionChannel"
+    "@id" : "https://w3id.org/transmodel/organisations#DistributionChannel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -670,27 +670,27 @@
     "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#governedBy",
+  "@id" : "https://w3id.org/transmodel/organisations#governedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "This property relates a Distribution Channel to the Organisation that takes responsability over it"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#DistributionChannel"
+    "@id" : "https://w3id.org/transmodel/organisations#DistributionChannel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "governed by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#language",
+  "@id" : "https://w3id.org/transmodel/organisations#language",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -703,51 +703,51 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#language"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#mbox",
+  "@id" : "https://w3id.org/transmodel/organisations#mbox",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#name",
+  "@id" : "https://w3id.org/transmodel/organisations#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#operatesInAdministrativeZone",
+  "@id" : "https://w3id.org/transmodel/organisations#operatesInAdministrativeZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Operator"
+    "@id" : "https://w3id.org/transmodel/organisations#Operator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "operatesInAdministrativeZone"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone"
+    "@id" : "https://w3id.org/transmodel/organisations#AdministrativeZone"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#providesService",
+  "@id" : "https://w3id.org/transmodel/organisations#providesService",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "providesService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ServiceArea"
+    "@id" : "https://w3id.org/transmodel/organisations#ServiceArea"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED"
+    "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/kos/authorities/DistributionChannelType",
+  "@id" : "https://w3id.org/transmodel/kos/organisations/DistributionChannelType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/kos/authorities/OrganisationType",
+  "@id" : "https://w3id.org/transmodel/kos/organisations/OrganisationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",

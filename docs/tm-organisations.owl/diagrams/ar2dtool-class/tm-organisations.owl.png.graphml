@@ -41,19 +41,19 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_https://w3id.org/transmodel/authorities/1.0">
+      <node id="nid_https://w3id.org/transmodel/organisations/1.0">
          <data key="d0">
             <y:ShapeNode>
                <y:Geometry height="30.0" width="430.0" x="0.0" y="0.0" />
                <y:Fill color="#FFFFFF" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">https://w3id.org/transmodel/authorities/1.0</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">https://w3id.org/transmodel/organisations/1.0</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:versionIRI1" source="nid_base:" target="nid_https://w3id.org/transmodel/authorities/1.0">
+    <edge id="eid_owl:versionIRI1" source="nid_base:" target="nid_https://w3id.org/transmodel/organisations/1.0">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
