@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
         <h1 class="title">Transmodel Vocabularies</h1>
         <nav class="navbar navbar-expand-md navbar-dark ">
             <div class="mx-auto my-2 order-0 order-md-1 position-relative">
@@ -29,9 +29,10 @@
                         </div>
             </div>
         </nav>
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show focus in active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
-                <p class="text-justify">
+        <div class="mt-3 tab-content" id="nav-tabContent">
+            <div class="container tab-pane fade show focus in active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+                <h2>Description:</h2>
+                <p class="text-justify mt-3">
                         With the ultimate goal of enabling the provision of multimodal transportation services,
                         the <abbr title="European Union">EU</abbr> Regulation <a href="https://eur-lex.europa.eu/eli/reg_del/2017/1926/oj">2017/1926</a> is
                         requiring transport stakeholders to allow access to their data in specific data formats
@@ -60,20 +61,24 @@
             </div>
 
             <div class="tab-pane fade" id="nav-voc-catalog" role="tabpanel" aria-labelledby="nav-voc-catalog-tab">
-                <p class="text-justify">
+                <div class="container">
+                    <h2>Vocabulary Catalog:</h2>
+                    <p class="text-left mt-3">
                         Below is the list of vocabularies that are being created within the SNAP Project specially
                         for use by transit organisations or authorities but also for any other organisation which
                         wants to make their transit data compliant with Transmodel model of the European
                         <abbr title="Intelligent Transport Systems">ITS</abbr> Directive.
-                </p>
+                    </p>
+                </div>
+
                     
                 <div class="table-responsive-sm">
                     <table class="table ">
                         <caption class="t-above"><span class="table-number">Table 1:</span> Modules of the Transmodel Ontology</caption>
                         <thead class="redbg">
-                            <tr>
+                            <tr class="text-center">
                                 <th scope="col">Vocabulary</th>
-                                <th scope="col">Release Date</th>
+                                <th scope="col">ReleaseDate</th>
                                 <th scope="col">Prefix</th>
                                 <th scope="col">Serialisation</th>
                                 <th scope="col">Licence</th>
@@ -154,9 +159,13 @@
 
 
             <div class="tab-pane fade" id="nav-catalog-list" role="tabpanel" aria-labelledby="nav-catalog-list-tab">
-                <p class="text-justify">
-                    This is the catalog of the SKOS list generated as part of the development of the
-                    Transmodel Ontology.</p>
+                <div class="container">
+                    <h2>SKOS lists Catalog:</h2>
+                    <p class="text-left mt-3">
+                            This is the catalog of the SKOS list generated as part of the development of the
+                            Transmodel Ontology.
+                    </p>
+                </div>
                 <div class="table-responsive-sm">
                     <table class="table">
                         <caption class="t-above"><span class="table-number">Table 2:</span> SKOS list Catalog</caption>
@@ -407,12 +416,15 @@
             </div>
 
             <div class="tab-pane fade" id="nav-voc" role="tabpanel" aria-labelledby="nav-voc-tab">
-                <p class="text-justify">
-                    Below is a list of vocabularies that are reused within the Transmodel Ontology. It is
-                    important to mention that for the development of these vocabularies, the methodology being
-                    used for this project has not been explicitly followed. Therefore, there is no
-                    documentation available related to Use Cases, User Stories, etc.
-                </p>
+                <div class="container">
+                    <h2>Reused Vocabularies:</h2>
+                    <p class="text-left mt-3">
+                            Below is a list of vocabularies that are reused within the Transmodel Ontology. It is
+                            important to mention that for the development of these vocabularies, the methodology being
+                            used for this project has not been explicitly followed. Therefore, there is no
+                            documentation available related to Use Cases, User Stories, etc.
+                    </p>
+                </div>
                 <div class="table-responsive-sm">
                     <table class="table">
                         <caption class="t-above"><span class="table-number">Table 3:</span> Reused Vocabularies</caption>
@@ -487,8 +499,9 @@
                     </table>
                 </div>
             </div>
-            <div class="tab-pane fade" id="nav-non-ont" role="tabpanel" aria-labelledby="nav-voc-non-ont">
-                <div>
+            <div class=" container tab-pane fade" id="nav-non-ont" role="tabpanel" aria-labelledby="nav-voc-non-ont">
+                <h2>Non ontological Resources:</h2>
+                <div class="mt-3">
                 <p class="text-justify">
                         It is important to note that, according to the used existing ontology engineering
                         methodology, and as recorded commonly in other ontology engineering methodologies as well,
@@ -510,9 +523,7 @@
                         <p class="text-justify">
                         Three are the resources which have helped into the implementation of the Transmodel
                         Ontology: the Transmodel model (UML), the NeTEx standard (XML Schema) and de GTFS model (CSV).
-                        </p>
-                        </div>
-                        
+                        </p>                        
                         <ul class="org-ul">
                         <li><a id="orgcbdfdaa"></a>Transmodel<br />
                         <div class="outline-text-3" id="text-orgcbdfdaa">
@@ -563,7 +574,8 @@
                     </li>
                 </ul>
             </div>
-            </div>       
+            </div> 
+        </div>      
             </div>
         </div>
     </div>
