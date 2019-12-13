@@ -5,35 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Transmodel Vocabularies</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h1 class="title">Transmodel Vocabularies</h1>
-        <nav class="navbar navbar-expand-md navbar-dark redbg sticky-top">
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapse_target">
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link focus " id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Description</a>
-                    <a class="nav-item nav-link" id="nav-voc-catalog-tab" data-toggle="tab" href="#nav-voc-catalog" role="tab" aria-controls="nav-voc-catalog" aria-selected="false">Vocabulary Catalog</a>
-                    <a class="nav-item nav-link" id="nav-catalog-list-tab" data-toggle="tab" href="#nav-catalog-list" role="tab" aria-controls="nav-catalog-list" aria-selected="false">SKOS lists Catalog</a>
-                    <a class="nav-item nav-link" id="nav-voc-tab" data-toggle="tab" href="#nav-voc" role="tab" aria-controls="nav-voc" aria-selected="false">Reused Vocabularies</a>
-                    <a class="nav-item nav-link" id="nav-non-ont-tab" data-toggle="tab" href="#nav-non-ont" role="tab" aria-controls="nav-non-ont" aria-selected="false">Non ontological resources</a>
-                </div>
+        <nav class="navbar navbar-expand-md navbar-dark ">
+            <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapse_target">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link focus " id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Description</a>
+                                <a class="nav-item nav-link" id="nav-voc-catalog-tab" data-toggle="tab" href="#nav-voc-catalog" role="tab" aria-controls="nav-voc-catalog" aria-selected="false">Vocabulary Catalog</a>
+                                <a class="nav-item nav-link" id="nav-catalog-list-tab" data-toggle="tab" href="#nav-catalog-list" role="tab" aria-controls="nav-catalog-list" aria-selected="false">SKOS lists Catalog</a>
+                                <a class="nav-item nav-link" id="nav-voc-tab" data-toggle="tab" href="#nav-voc" role="tab" aria-controls="nav-voc" aria-selected="false">Reused Vocabularies</a>
+                                <a class="nav-item nav-link" id="nav-non-ont-tab" data-toggle="tab" href="#nav-non-ont" role="tab" aria-controls="nav-non-ont" aria-selected="false">Non ontological resources</a>
+                            </div>
+                        </div>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show focus in active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
-                <p></p>
-                <p>
+                <p class="text-justify">
                         With the ultimate goal of enabling the provision of multimodal transportation services,
                         the <abbr title="European Union">EU</abbr> Regulation <a href="https://eur-lex.europa.eu/eli/reg_del/2017/1926/oj">2017/1926</a> is
                         requiring transport stakeholders to allow access to their data in specific data formats
@@ -43,27 +41,26 @@
                         used, thus a data conversion is needed.
                         </p>
                         
-                        <p>
+                        <p class="text-justify">
                         This regulation is based in the EU Directive <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1575364946186&amp;uri=CELEX:32010L0040">2010/40/EU</a> for the deploymen of Intelligent
                         Transport Systems in the field of road transport and for interfaces with other modes of transport.
                         </p>
                         
-                        <p>
+                        <p class="text-justify">
                         The <abbr title="Semantic National Access Point">SNAP</abbr> solution
                         supports data conversion, decreasing the time required to perform it and hiding its
                         complexity. With <b>SNAP</b> transportation data will be compliant with the EU Regulation in a
                         snap &#129310;
                         </p>
                         
-                        <p>
+                        <p class="text-justify">
                         Transport authorities, operators and infrastructure managers can render their legacy data
                         interoperable and compliant with standards using a solution fit to their needs
                         </p>
             </div>
 
             <div class="tab-pane fade" id="nav-voc-catalog" role="tabpanel" aria-labelledby="nav-voc-catalog-tab">
-                <p></p>
-                <p>
+                <p class="text-justify">
                         Below is the list of vocabularies that are being created within the SNAP Project specially
                         for use by transit organisations or authorities but also for any other organisation which
                         wants to make their transit data compliant with Transmodel model of the European
@@ -71,7 +68,7 @@
                 </p>
                     
                 <div class="table-responsive-sm">
-                    <table class="table">
+                    <table class="table ">
                         <caption class="t-above"><span class="table-number">Table 1:</span> Modules of the Transmodel Ontology</caption>
                         <thead class="redbg">
                             <tr>
@@ -157,8 +154,7 @@
 
 
             <div class="tab-pane fade" id="nav-catalog-list" role="tabpanel" aria-labelledby="nav-catalog-list-tab">
-                <p></p>
-                <p>
+                <p class="text-justify">
                     This is the catalog of the SKOS list generated as part of the development of the
                     Transmodel Ontology.</p>
                 <div class="table-responsive-sm">
@@ -411,8 +407,7 @@
             </div>
 
             <div class="tab-pane fade" id="nav-voc" role="tabpanel" aria-labelledby="nav-voc-tab">
-                <p></p>
-                <p>
+                <p class="text-justify">
                     Below is a list of vocabularies that are reused within the Transmodel Ontology. It is
                     important to mention that for the development of these vocabularies, the methodology being
                     used for this project has not been explicitly followed. Therefore, there is no
@@ -493,16 +488,15 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-non-ont" role="tabpanel" aria-labelledby="nav-voc-non-ont">
-                <p></p>
                 <div>
-                <p>
+                <p class="text-justify">
                         It is important to note that, according to the used existing ontology engineering
                         methodology, and as recorded commonly in other ontology engineering methodologies as well,
                         these non-ontological resources have gone through an extensive process of reengineering so
                         as to avoid the biases that may have a negative impact on the resulting ontologies.
                         </p>
                         
-                        <p>
+                        <p class="text-justify">
                         This is due to the fact that the choice of implementation (UML, XML and CSV, respectively)
                         usually generates modelling biases, especially when it comes to representing the names of
                         properties (local vs global names), n-ary relations, enumerations that can be converted
@@ -513,7 +507,7 @@
                         implementation nowadays.
                         </p>
                         
-                        <p>
+                        <p class="text-justify">
                         Three are the resources which have helped into the implementation of the Transmodel
                         Ontology: the Transmodel model (UML), the NeTEx standard (XML Schema) and de GTFS model (CSV).
                         </p>
@@ -522,7 +516,7 @@
                         <ul class="org-ul">
                         <li><a id="orgcbdfdaa"></a>Transmodel<br />
                         <div class="outline-text-3" id="text-orgcbdfdaa">
-                                <p>
+                                <p class="text-justify">
                                         The <a href="http://www.transmodel-cen.eu/">Transmodel model</a> is the <abbr title="Comité Européen de Normalisation">CEN</abbr> (<a href="https://www.cen.eu/Pages/default.aspx">European Committee for Standardization</a>)  European
                                         Reference Data Model for Public Transport Information. As discussed in the corresponding
                                         website, it provides "an abstract model of common public transport concepts and data
@@ -531,14 +525,14 @@
                                         planning etc".
                                         </p>
                                         
-                                        <p>
+                                        <p class="text-justify">
                                         The Transmodel (version 6, 2017) is made available in UML and browsable and downloadable
                                         from its <a href="http://www.transmodel-cen.eu/downloads/">downloads</a> section.
                                         </p>
                         
                         <li><a id="org98cffed"></a>NeTEx<br />
                         <div class="outline-text-3" id="text-org98cffed">
-                                <p>
+                                <p class="text-justify">
                                         The NeTEx (public transport Network Timetable Exchange) is another CEN standard for the
                                         interoperable exchange of public transport passenger information between systems. It is
                                         implemented in XML schema, with its latest version (v1.09) being available at <a href="https://github.com/NeTEx-CEN/NeTEx">Github</a>. The
@@ -551,14 +545,14 @@
                         
                         <li><a id="orge240e4d"></a>GTFS<br />
                         <div class="outline-text-3" id="text-orge240e4d">
-                                <p>
+                                <p class="text-justify">
                                         The <a href="https://developers.google.com/transit/gtfs/reference/">GTFS</a> (General Transit Feed Specification) model is a format proposed by Google for the
                                         representation of public transportation schedules and associated geographic information,
                                         which has become a de facto standard for the publication of the information on public
                                         transport that can be used to provide trip planning functionality.
                                         </p>
                                         
-                                        <p>
+                                        <p class="text-justify">
                                         The last version of the <a href="https://gtfs.org/reference/static">GTFS feed</a> (revised January 17, 2019) consists of a collection of
                                         at least 5, 2 conditionally required and up to 15 CSV files contained within a .zip file,
                                         which describe together a transit system's scheduled operations as visible to riders. It
@@ -574,3 +568,7 @@
         </div>
     </div>
 </body>
+</html>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
