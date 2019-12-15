@@ -13,6 +13,24 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.snapColor{
+    font-weight: 700!important;
+    background: linear-gradient(90deg,#ffa209 0%, #ff4a27 100%)!important;
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color: #ffffff;
+    background-color: #fff;
+    border-top-color:#ffae06!important;
+    border-left-color: #ffae06!important;
+    border-right-color: #ffae06!important;
+    border-bottom-color: #ffffff!important;
+
+}
+.nav-tabs {
+    border-bottom: 1px solid #ffae06!important;
+}
 /* #nav-tab a{
     color: white!important;
     background: inherit;
