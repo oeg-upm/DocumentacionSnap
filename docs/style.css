@@ -1,7 +1,7 @@
 .redbg{
     /* background: red!important; */
     background: rgb(255,174,6);
-    background: linear-gradient(90deg,#ffa209 0%, #ff4a27 100%);
+    background: linear-gradient(90deg,#ffa209 0%, #ea003e 100%);
     color: white!important;
 }
 body{
@@ -9,9 +9,16 @@ body{
 }
 a{
     font-weight: 700!important;
-    background: linear-gradient(90deg,#ffa209 0%, #ff4a27 100%);
+    background: linear-gradient(90deg,#ffa209 0%, #ea003e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.whiteText a{
+    color: #ffffff!important;
+    background: inherit!important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+}
 }
 .snapColor{
     font-weight: 700!important;
@@ -27,6 +34,18 @@ a{
     border-right-color: #ffae06!important;
     border-bottom-color: #ffffff!important;
 
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover{
+    color: #ffffff;
+    background-color: #fff;
+    border-top-color:#ffae06!important;
+    border-left-color: #ffae06!important;
+    border-right-color: #ffae06!important;
+    border-bottom-color: #ffffff!important;
+
+}
+.inheritBg{
+    background: inherit!important;
 }
 .nav-tabs {
     border-bottom: 1px solid #ffae06!important;

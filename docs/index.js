@@ -364,7 +364,7 @@ let table1 = [
         <td class="px-2" nowrap>${row['Lang']}</td>\n
         <td class="px-2" nowrap>${row['Domain']}</td>\n
         <td class="px-2" nowrap>${row['Links']}</td>\n
-        <td class="px-2" nowrap>${row['Description']}</td>\n
+        <td class="px-2">${row['Description']}</td>\n
       </tr>\n
       `
   });
@@ -398,7 +398,7 @@ let table1 = [
         <td class="px-2" nowrap>${row['Domain']}</td>\n
         <td class="px-2" nowrap>${row['isUsedInVocab']}</td>\n
         <td class="px-2" nowrap>${row['Links']}</td>\n
-        <td class="px-2" nowrap>${row['Description']}</td>\n
+        <td class="px-2">${row['Description']}</td>\n
       </tr>\n
       `
   });
@@ -444,9 +444,16 @@ function insertTable1(){
   console.log(table1Html)
   $("#vocabulary").append(table1Html);
 }
+function loadYear(){
+  let date = new Date()
+  year = date.getFullYear();
+  console.log('YEAR: ' + year)
+  $("#year").append(year);
+}
 function loadTables(){
   insertTable1();
   insertTable2();
   insertTable3();
+  loadYear();
 }
 loadTables();
