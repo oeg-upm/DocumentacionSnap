@@ -13,7 +13,8 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.whiteText a{
+
+.whiteText{
     color: #ffffff!important;
     background: inherit!important;
     -webkit-background-clip: text;
