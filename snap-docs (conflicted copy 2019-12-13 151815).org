@@ -1,0 +1,236 @@
+# -*- mode: org -*-
+# -*- coding: utf-8 -*-
+#+STARTUP: hidestars overview noindent inlineimages logdrawer shrink
+#+OPTIONS:   H:3 toc:nil num:nil \n:nil @:t ::t |:t ^:nil -:t f:t *:t <:t date:t footer:nil
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:nil pri:nil tags:nil css:nil
+#+OPTIONS: author:nil email:nil creator:nil timestamp:nil date:nil
+#+OPTIONS:  org-html-doctype:HTML5
+#+EXPORT_FILE_NAME: ./docs/index.html
+#+otroSETUPFILE: ./setupfile.org
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/jjgr.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/blog.css" />
+#+HTML_HEAD: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.1/pure-min.css">
+#+HTML_HEAD: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/snap.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/cs_org.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/style.css" />
+#+INFOJS_OPT: path:https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js
+
+#+rtd-setupfile:  https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+tm-setupfile: https://raw.githubusercontent.com/caffo/org-minimal-html-theme/master/setup/theme-minimal-with-collection-header.setup
+#+description: ontologías web
+#+twbs-setupfile: ./twbs-setupfile.org
+#+title: Transmodel Vocabularies
+#+date: <2019-11-28 Thu>
+#+author: Adolfo Antón Bravo
+#+language: en
+
+* Description
+
+With the ultimate goal of enabling the provision of multimodal transportation services,
+the @@html:<abbr title="European Union">@@EU@@html:</abbr>@@ Regulation [[https://eur-lex.europa.eu/eli/reg_del/2017/1926/oj][2017/1926]] is
+requiring transport stakeholders to allow access to their data in specific data formats
+i.e., @@html:<abbr title="Network Timetable Exchange">@@NeTEx@@html:</abbr>@@,
+@@html:<abbr title="Service Interface for Real Time
+Information">@@SIRI@@html:</abbr>@@. Currently, the requested data formats are rarely
+used, thus a data conversion is needed.
+
+This regulation is based in the EU Directive [[https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1575364946186&uri=CELEX:32010L0040][2010/40/EU]] for the deploymen of Intelligent
+Transport Systems in the field of road transport and for interfaces with other modes of transport.
+
+The @@html:<abbr title="Semantic National Access Point">@@SNAP@@html:</abbr>@@ solution
+supports data conversion, decreasing the time required to perform it and hiding its
+complexity. With *SNAP* transportation data will be compliant with the EU Regulation in a
+snap.
+
+Transport authorities, operators and infrastructure managers can render their legacy data
+interoperable and compliant with standards using a solution fit to their needs
+
+
+** Why Snap                                                        :noexport:
+*** Unique
+
+No proven, market-ready solutions that cover the entire conversion process enabled by snap.
+
+*** Innovative
+
+Provides data conversion based on semantic technologies.
+
+*** Simple and Easy
+
+Hides the complexity of the conversion process and of the target standards.
+
+*** High Speed
+
+Prevents acquiring the knowledge or contracting the competence to implement a custom solution.
+
+
+** Actions                                                         :noexport:
+
+*** The Transmodel Ontology                                        :noexport:
+The development of the Transmodel Ontology is one of the main goals of the SNAP Project
+due to the fact that this model is used for the lifting and lowering operations performed
+by the GTFS-to-NeTEx.
+
+All the work done on the development of the TransModel Ontology is available in the
+corresponding GitHub repository (https://github.com/oeg-upm/transmodel-ontology), which
+follows the usual structure for ontology development projects created using the Linked
+Open Terms ontology engineering methodology (http://lot.linkeddata.es/). That is, the
+repository is structured as follows:
+- =ontology folder=, where the implementation of the ontology in the Web Ontology Language
+  (OWL) is maintained. This folder contains five OWL files that correspond to the five
+  modules identified for this ontology network: commons, authorities, facilities, fares
+  and journeys. The relationship between all these modules is presented in Figure
+  3.2. (see below).
+- =kos folder=, where the RDF-based implementations of the SKOS codelists/concept schemes
+  that are useful to encode coded values for properties are provided.
+- =requirements folder=, where all the requirements used to derive the ontology
+  conceptualisation and implementation are recorded in the form of competency questions,
+  so as to allow keeping traces of where some definitions for terms (classes and
+  properties) come from, and how they are used to solve simple querying tasks.
+- =diagrams folder=, where different diagrams are stored to provide additional documentation
+  about all the ontologies, and facilitate their understanding by those willing to use
+  them. These diagrams are included in the corresponding HTML documentation of the
+  ontology.
+- =examples folder=, where some RDF-based and JSON-LD-based code snippets are provided in
+  order to facilitate understanding of the OWL implementations and generation of the
+  corresponding RDF code for individuals.
+
+Finally, the Ontoology folder is created automatically by the Ontoology tool
+(http://ontoology.linkeddata.es/), to which this repository is connected, which is in
+charge of generating the ontology HTML documentation every time that there is a change in
+any of the ontology modules. Part of this HTML documentation has also been edited manually
+to provide additional information for some parts of the ontologies, and the resulting
+files are the ones that are published online.
+
+* Vocabulary Catalogue
+
+Below is the list of vocabularies that are being created within the SNAP Project specially
+for use by transit organisations or authorities but also for any other organisation which
+wants to make their transit data compliant with Transmodel model of the European
+@@html:<abbr title="Intelligent Transport Systems">@@ITS@@html:</abbr>@@ Directive.
+
+
+#+NAME: transmodel-modules
+#+caption: Modules of the Transmodel Ontology
+| Vocabulary    | Release Date     | Prefix    | Serialisation                                     | Licence | Lang | Domain        | Links                                                                          | Description                                                                                                                                                                                      |
+|               |                  |           |                                                   |         |      |               |                                                                                | <30>                                                                                                                                                                                             |
+|---------------+------------------+-----------+---------------------------------------------------+---------+------+---------------+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [[./tm-commons.owl/documentation/index-en.html][Commons]]       | <2019-11-28 Thu> | tmcommons | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | transit       | [[https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-commons.owl][repository]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/labels/commons][issues]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions][requirements]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/releases][releases]] | Commons module (prefix tmcommons, https://w3id.org/transmodel/commons#) to represent all those concepts and properties that are general enough to be used across all modules.                    |
+| [[./tm-facilities.owl/documentation/index-en.html][Facilities]]    | <2019-11-28 Thu> | tmfac     | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | facilities    | [[https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-facilities.owl][repository]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/labels/facilities][issues]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions][requirements]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/releases][releases]] | Facilities module (prefix tmfac, https://w3id.org/transmodel/facilities#) to represent all the information related to facilities.                                                                |
+| [[./tm-fares.owl/documentation/index-en.html][Fares]]         | <2019-11-28 Thu> | tmfares   | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | fares         | [[https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-fares.owl][repository]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/labels/fares][issues]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions][requirements]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/releases][releases]] | Organisations module, prefix tmorg, https://w3id.org/transmodel/organisations#, to represent all the information related to the public transport organisations.|
+| [[./tm-journeys.owl/documentation/index-en.html][Journeys]]      | <2019-11-28 Thu> | tmjourney | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | [[https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-journeys.owl][repository]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/labels/journeys][issues]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions][requirements]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/releases][releases]] | Journeys module (prefix tmjourney, https://w3id.org/transmodel/journeys#) to represent all the information related to the trips and the different types of journeys for passengers and vehicles. |
+| [[./tm-organisations.owl/documentation/index-en.html][Organisations]] | <2019-11-28 Thu> | tmorg     | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | organisations | [[https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-org.owl][repository]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/labels/organisations][issues]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions][requirements]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/releases][releases]] | Organisations module (prefix tmorg, https://w3id.org/transmodel/organisations#) to represent all the information related to the public transport organisations.                                  |
+|---------------+------------------+-----------+---------------------------------------------------+---------+------+---------------+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+* SKOS lists Catalogue
+
+This is the catalogue of the SKOS list generated as part of the development of the
+Transmodel Ontology.
+
+#+name: skos-list-catalogue
+#+caption: SKOS list Catalogue
+| SKOS List                      | Licence | Lang | Domain        | isUsed in Vocab | Links                          | Description                                                                            |
+|--------------------------------+---------+------+---------------+-----------------+--------------------------------+----------------------------------------------------------------------------------------|
+| all-modes                      | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | commons       | commons         | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/all-modes.ttl][all-modes.ttl]]                  | Allowed values for Vehicle Mode                                                        |
+| continuous-mode                | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | commons       | commons         | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/continuous-mode.ttl][continuous-mode.ttl]]            | Allowed values for Continuous Mode                                                     |
+| road-vehicle-mode              | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | commons       | commons         | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/road-vehicle-mode.ttl][road-vehicle-mode.ttl]]          | Allowed values for Road Vehicle Mode                                                   |
+| sites-access-mode              | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | commons       | commons         | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/sites-access-mode.ttl][sites-access-mode.ttl]]          | Allowed values for Site Access Mode                                                    |
+| vehicle-mode                   | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | commons       | commons         | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/commons/vehicle-mode.ttl][vehicle-mode.ttl]]               | Allowed values for modes of Public Transport applicable to timetabled public transport |
+| facilities.ttl                 | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | facilities    | facilities      | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/facilities.ttl][facilities.ttl]]                 | Codelist of types of facilities                                                        |
+| organisation-type.ttl          | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | organisations | organisations   | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/organisations/organisation-type.ttl][organisation-type.ttl]]          | Codelist of types of organisations                                                     |
+| organisation-role-type.ttl     | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | organisations | organisations   | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/organisations/responsability-role-type.ttl][responsability-role-type.ttl]]   | Codelist of types of responsability roles                                              |
+| day-type.ttl                   | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/day-type.ttl][day-type.ttl]]                   | Enumeration of Types of Days                                                           |
+| direction-type.ttl             | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/direction-type.ttl][direction-type.ttl]]             | Allowed values for Direction Types                                                     |
+| entrance-type.ttl              | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/entrance-type.ttl][entrance-type.ttl]]              | Allowed values for Entrance Types                                                      |
+| interchange-weighting-type.ttl | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/interchange-weighting-type.ttl][interchange-weighting-type.ttl]] | Allowed values for Interchange Weighting Type                                          |
+| limited-use-type.ttl           | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/limited-use-type.ttl][limited-use-type.ttl]]           | Allowed values for Limited Use Type                                                    |
+| mobility-limitation.ttl        | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/mobility-limitation.ttl][mobility-limitation.ttl]]        | Allowed values for Mobility Limitation                                                 |
+| quay-type.ttl                  | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/quay-type.ttl][quay-type.ttl]]                  | Allowed values for Quay Type                                                           |
+| stop-place-component-type.ttl  | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-place-component-type.ttl][stop-component-type.ttl]]        | Allowed values for Stop Component Type                                                 |
+| stop-place.ttl                 | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-place.ttl][stop-place.ttl]]                 | Allowed values for Stop Place                                                          |
+| stop-use-type.ttl              | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | journeys        | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/journeys/stop-use-type.ttl][stop-use-type.ttl]]              | Allowed values for Stop Use Type                                                       |
+| booking-access-type.ttl        | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | fares         | fares           | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/booking-access-type.ttl][booking-access-type.ttl]]        | Allowed values for Booking Access Type                                                 |
+| booking-method-type.ttl        | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | fares         | fares           | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/booking-method-type.ttl][booking-method-type.ttl]]        | Allowed values for Booking Method Type                                                 |
+| distribution-channel-type.ttl  | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | fares         | fares           | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/distribution-channel-type.ttl][distribution-channel-type.ttl]]  | Allowed values for Distribution Channel Type                                           |
+| distribution-rights.ttl        | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | fares         | fares           | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/distribution-rights.ttl][distribution-rights.ttl]]        | Allowed values for Distribution Rights                                                 |
+| fulfilment-method-type.ttl     | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | fares         | fares           | [[https://raw.githubusercontent.com/oeg-upm/transmodel-ontology/master/kos/fares/fulfilment-method-type.ttl][fulfilment-method-type.ttl]]     | Allowed values for Fulfilment Method Type                                                 |
+|--------------------------------+---------+------+---------------+-----------------+--------------------------------+----------------------------------------------------------------------------------------|
+* Reused Vocabularies
+
+Below is a list of vocabularies that are reused within the Transmodel Ontology. It is
+important to mention that for the development of these vocabularies, the methodology being
+used for this project has not been explicitly followed. Therefore, there is no
+documentation available related to Use Cases, User Stories, etc.
+
+#+name:  reused-vocabularies
+#+caption:  Reused Vocabularies
+| Vocabulary       | Prefix    | Serialisation                                     | License | Lang | Domain        | Links  | Description                                                                                          |
+|------------------+-----------+---------------------------------------------------+---------+------+---------------+--------+------------------------------------------------------------------------------------------------------|
+| W3C Organization | vocab-org | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | organisation  | [[http://www.w3.org/ns/org#][org]]    | W3C Organization Ontology used in the ontology module focused on Organisations                       |
+| W3C Geo WSS84    | geo       | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | [[https://www.w3.org/2003/01/geo/][geo]]    | W3C Geo WGS84 Ontology used used for the representation of latitude and longitude data about points. |
+| Dublin Core      | dc        | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | organisations | [[https://www.dublincore.org/specifications/dublin-core/dcmi-terms/2012-06-14/][dc]]     | General ontologies like Dublin Core for the representation of basic properties such as identifiers.  |
+| Schema           | schema    | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | organisations | [[http://schema.org/docs/documents.html][schema]] | Schema is used in the ontology module focused on Organisations                                       |
+| FOAF             | foaf      | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | organisations | [[http://xmlns.com/foaf/0.1/][foaf]]   | FOAF is used in the ontology module focused on Organisations.                                        |
+|------------------+-----------+---------------------------------------------------+---------+------+---------------+--------+------------------------------------------------------------------------------------------------------|
+* Non ontological resources  
+
+It is important to note that, according to the used existing ontology engineering
+methodology, and as recorded commonly in other ontology engineering methodologies as well,
+these non-ontological resources have gone through an extensive process of reengineering so
+as to avoid the biases that may have a negative impact on the resulting ontologies.
+
+This is due to the fact that the choice of implementation (UML, XML and CSV, respectively)
+usually generates modelling biases, especially when it comes to representing the names of
+properties (local vs global names), n-ary relations, enumerations that can be converted
+into thesauri or controlled lists of codes, etc. Therefore, the process of reengineering
+has focused on eliminating as many of these biases as possible so as to generate a model
+that is *sufficiently rich* in terms of *expressiveness* and makes a natural usage of the
+ontology modelling language OWL, which is the one commonly used for ontology
+implementation nowadays.
+
+Three are the resources which have helped into the implementation of the Transmodel
+Ontology: the Transmodel model (UML), the NeTEx standard (XML Schema) and de GTFS model (CSV).
+
+** Transmodel
+
+The [[http://www.transmodel-cen.eu/][Transmodel model]] is the @@html:<abbr title="Comité Européen de Normalisation">@@CEN@@html:</abbr>@@ ([[https://www.cen.eu/Pages/default.aspx][European Committee for Standardization]])  European
+Reference Data Model for Public Transport Information. As discussed in the corresponding
+website, it provides "an abstract model of common public transport concepts and data
+structures that can be used to build many different kinds of public transport information
+system, including timetabling, fares, operational management, real time data, journey
+planning etc".
+
+The Transmodel (version 6, 2017) is made available in UML and browsable and downloadable
+from its [[http://www.transmodel-cen.eu/downloads/][downloads]] section.
+
+** NeTEx
+
+The NeTEx (public transport Network Timetable Exchange) is another CEN standard for the
+interoperable exchange of public transport passenger information between systems. It is
+implemented in XML schema, with its latest version (v1.09) being available at [[https://github.com/NeTEx-CEN/NeTEx][Github]]. The
+functional scope of NeTEx is divided into three parts, each covering a functional subset
+of Transmodel: Part 1 describes the fixed Network (stops, routes, lines, etc.); Part 2 is
+mainly focused on Timetables; and Part 3 covers Fare data.
+
+** GTFS
+
+The [[https://developers.google.com/transit/gtfs/reference/][GTFS]] (General Transit Feed Specification) model is a format proposed by Google for the
+representation of public transportation schedules and associated geographic information,
+which has become a de facto standard for the publication of the information on public
+transport that can be used to provide trip planning functionality.
+
+The last version of the [[https://gtfs.org/reference/static][GTFS feed]] (revised January 17, 2019) consists of a collection of
+at least 5, 2 conditionally required and up to 15 CSV files contained within a .zip file,
+which describe together a transit system's scheduled operations as visible to riders. It
+is focused on scheduled information and does not include real-time information, for which
+there is the GTFS-realtime specification.
+
+* Other things                                                     :noexport:
+
+# Local Variables:
+# org-html-postamble: nil
+# org-html-doctype: html5
+# End:
