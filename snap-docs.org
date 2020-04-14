@@ -30,57 +30,7 @@
 #+author: Adolfo Antón Bravo
 #+language: en
 
-#+begin_export html
-    <div class="w-100 redbg">
-        <div class="container">
-            <div class="row">
-                    <div class="col-6">
-                            <h1 class="display-4">Snap</h1>
-                            <h5>Your transport data<br>into EU compliance</h5>
-                        </div>
-                        <div class="col-6 my-auto">
-                            <ul class="nav justify-content-center">
-                                <li class="nav-item">
-                                    <a href="" class=" whiteText px-2">What is Snap</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a href="" class=" whiteText px-2">Why Snap</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a href="" class=" whiteText px-2">Get in touch</a>
-                                </li>
-                            </ul>
-                        </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid my-5">
-        <!-- <div class="container">
-                <h3>If you want to learn more, check out the <a href="https://www.snap-project.eu/" class="">Snap Project.</a></h3>
-        </div> -->
-
-        <nav class="navbar navbar-expand-md navbar-dark ">
-            <div class="mx-auto my-2 order-0 order-md-1 position-relative">
-                <div class="" id="">
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link focus " id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Description</a>
-                        <a class="nav-item nav-link" id="nav-voc-catalog-tab" data-toggle="tab" href="#nav-voc-catalog" role="tab" aria-controls="nav-voc-catalog" aria-selected="false">Vocabulary Catalog</a>
-                        <a class="nav-item nav-link" id="nav-catalog-list-tab" data-toggle="tab" href="#nav-catalog-list" role="tab" aria-controls="nav-catalog-list" aria-selected="false">SKOS lists Catalog</a>
-                        <a class="nav-item nav-link" id="nav-voc-tab" data-toggle="tab" href="#nav-voc" role="tab" aria-controls="nav-voc" aria-selected="false">Reused Vocabularies</a>
-                        <a class="nav-item nav-link" id="nav-non-ont-tab" data-toggle="tab" href="#nav-non-ont" role="tab" aria-controls="nav-non-ont" aria-selected="false">Non ontological resources</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-#+end_export
-#+begin_export html
-<div class="mt-3 tab-content" id="nav-tabContent">
-<div class="container tab-pane fade show focus in active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
-#+end_export
 * Description
-#+begin_export html
-<p class="text-justify mt-3">
-#+end_export
 
 With the ultimate goal of enabling the provision of multimodal transportation services,
 the @@html:<abbr title="European Union">@@EU@@html:</abbr>@@ Regulation [[https://eur-lex.europa.eu/eli/reg_del/2017/1926/oj][2017/1926]] is
@@ -99,29 +49,13 @@ complexity. With *SNAP* transportation data will be compliant with the EU Regula
 snap.
 Transport authorities, operators and infrastructure managers can render their legacy data
 interoperable and compliant with standards using a solution fit to their needs
-#+begin_export html
-</p>
-</div>
-<!-- end description -->
-<div class="tab-pane fade" id="nav-voc-catalog" role="tabpanel" aria-labelledby="nav-voc-catalog-tab">
-<div class="container">
-#+end_export
-* Vocabulary Catalogue
 
-#+begin_export html
-<p class="text-left mt-3">
-#+end_export
+* Vocabulary Catalogue
 
 Below is the list of vocabularies that are being created within the SNAP Project specially
 for use by transit organisations or authorities but also for any other organisation which
 wants to make their transit data compliant with Transmodel model of the European
 @@html:<abbr title="Intelligent Transport Systems">@@ITS@@html:</abbr>@@ Directive.
-
-#+begin_export html
-</p>
-</div>
-<div class="container">
-#+end_export
 
 #+NAME: transmodel-modules
 #+caption: Modules of the Transmodel Ontology
@@ -134,12 +68,15 @@ wants to make their transit data compliant with Transmodel model of the European
 | [[./tm-journeys.owl/documentation/index-en.html][Journeys]]      | <2019-11-28 Thu> | tmjourney | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | journeys      | [[https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-journeys.owl][repository]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/labels/journeys][issues]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions][requirements]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/releases][releases]] | Journeys module (prefix tmjourney, [[https://w3id.org/transmodel/journeys#][https://w3id.org/transmodel/journeys#]]) to represent all the information related to the trips and the different types of journeys for passengers and vehicles. |
 | [[./tm-organisations.owl/documentation/index-en.html][Organisations]] | <2019-11-28 Thu> | tmorg     | rdf+xml@@html: <br />@@html@@html: <br />@@turtle | [[https://creativecommons.org/licenses/by/4.0/][CC-BY]]   | en   | organisations | [[https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-org.owl][repository]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/labels/organisations][issues]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions][requirements]]@@html:<br/>@@[[https://github.com/oeg-upm/transmodel-ontology/releases][releases]] | Organisations module (prefix tmorg, [[https://w3id.org/transmodel/organisations#][https://w3id.org/transmodel/organisations#]]#) to represent all the information related to the public transport organisations.                                 |
 |---------------+------------------+-----------+---------------------------------------------------+---------+------+---------------+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
 #+begin_export html
 </div>
+<!-- end transmodel-modules table -->
 <div class="row">
 <div class="col"></div>
 </div>
 <div class="container">
+<!-- begin container
 <div id="vocabulary" class="table-responsive"></div>
 </div>
 </div>
