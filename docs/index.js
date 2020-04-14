@@ -54,7 +54,7 @@ let table1 = [
     "Lang": "en",
     "Domain": "fares",
     "Links": "<a href=\"https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-fares.owl\"><img src=\"./icons/repo.svg\" class=\"icon\">repository</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/labels/fares\"><img src=\"./icons/issue-opened.svg\" class=\"icon\">issues</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions\"><img src=\"./icons/tasklist.svg\" class=\"icon\">requirements</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/releases\"><img src=\"./icons/tag.svg\" class=\"icon\">releases</a>",
-    "Description": "Organisations module (prefix tmorg, <a href=\"https://w3id.org/transmodel/organisations\">https://w3id.org/transmodel/organisations#</a>) to represent all the information related to the public transport organisations."
+    "Description": "Organisations module (prefix tmfares, <a href=\"https://w3id.org/transmodel/fares\">https://w3id.org/transmodel/fares#</a>) to represent all the information related to the public transport organisations."
   },
   {
     "Vocabulary": "<a href=\"./tm-journeys.owl/documentation/index-en.html\">Journeys</a>",
