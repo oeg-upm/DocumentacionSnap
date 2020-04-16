@@ -1,24 +1,13 @@
 {
   "@context" : {
-    "ParkingComponent" : {
-      "@id" : "https://w3id.org/transmodel/organisations#ParkingComponent"
-    },
-    "ParkingEntrance" : {
-      "@id" : "https://w3id.org/transmodel/organisations#ParkingEntrance"
-    },
-    "describedThrough" : {
-      "@id" : "https://w3id.org/transmodel/organisations#describedThrough",
-      "@type" : "@id"
-    },
-    "governedBy" : {
-      "@id" : "https://w3id.org/transmodel/organisations#governedBy",
-      "@type" : "@id"
-    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
+    },
+    "GroupOfEntities" : {
+      "@id" : "https://w3id.org/transmodel/commons#GroupOfEntities"
     },
     "Organisation" : {
       "@id" : "https://w3id.org/transmodel/organisations#Organisation"
@@ -42,9 +31,6 @@
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
-    "OrganisationUnit" : {
-      "@id" : "https://w3id.org/transmodel/organisations#OrganisationUnit"
-    },
     "author" : {
       "@id" : "https://w3id.org/transmodel/organisations#author"
     },
@@ -52,7 +38,7 @@
       "@id" : "https://w3id.org/transmodel/organisations#ControlCenter"
     },
     "mbox" : {
-      "@id" : "https://w3id.org/transmodel/organisations#mbox"
+      "@id" : "https://w3id.org/transmodel/org#mbox"
     },
     "Concept" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
@@ -60,9 +46,6 @@
     "timeZone" : {
       "@id" : "http://www.w3.org/2006/time#timeZone",
       "@type" : "@id"
-    },
-    "GroupOfOperators" : {
-      "@id" : "https://w3id.org/transmodel/organisations#GroupOfOperators"
     },
     "providesService" : {
       "@id" : "https://w3id.org/transmodel/organisations#providesService",
@@ -75,16 +58,13 @@
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
     "name" : {
-      "@id" : "https://w3id.org/transmodel/organisations#name"
-    },
-    "ParkingBay" : {
-      "@id" : "https://w3id.org/transmodel/organisations#ParkingBay"
+      "@id" : "https://w3id.org/transmodel/org#name"
     },
     "ContactPoint" : {
       "@id" : "http://schema.org/ContactPoint"
     },
     "Zone" : {
-      "@id" : "https://w3id.org/transmodel/organisations#Zone"
+      "@id" : "https://w3id.org/transmodel/commons#Zone"
     },
     "rights" : {
       "@id" : "http://purl.org/dc/elements/1.1/rights"
@@ -92,14 +72,17 @@
     "ServicedOrganisation" : {
       "@id" : "https://w3id.org/transmodel/organisations#ServicedOrganisation"
     },
+    "ManagementAgent" : {
+      "@id" : "https://w3id.org/transmodel/organisations#ManagementAgent"
+    },
     "identifier" : {
       "@id" : "http://purl.org/dc/elements/1.1/identifier"
     },
+    "OrganisationalUnit" : {
+      "@id" : "https://w3id.org/transmodel/organisations#OrganisationalUnit"
+    },
     "AdministrativeZone" : {
       "@id" : "https://w3id.org/transmodel/organisations#AdministrativeZone"
-    },
-    "ParkingArea" : {
-      "@id" : "https://w3id.org/transmodel/organisations#ParkingArea"
     },
     "ConceptScheme" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
@@ -107,37 +90,21 @@
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
-    "ParkingEntranceForPassengers" : {
-      "@id" : "https://w3id.org/transmodel/organisations#ParkingEntranceForPassengers"
-    },
-    "Parking" : {
-      "@id" : "https://w3id.org/transmodel/organisations#Parking"
-    },
     "Operator" : {
       "@id" : "https://w3id.org/transmodel/organisations#Operator"
-    },
-    "Employee" : {
-      "@id" : "https://w3id.org/transmodel/organisations#Employee"
-    },
-    "DistributionChannel" : {
-      "@id" : "https://w3id.org/transmodel/organisations#DistributionChannel"
     },
     "hasUnit" : {
       "@id" : "http://www.w3.org/ns/org#hasUnit",
       "@type" : "@id"
     },
-    "TOBECHECKED_parkingCapacity" : {
-      "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED_parkingCapacity",
-      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    "RetailConsortium" : {
+      "@id" : "https://w3id.org/transmodel/organisations#RetailConsortium"
     },
     "date" : {
       "@id" : "http://purl.org/dc/elements/1.1/date"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
-    },
-    "CrewBase" : {
-      "@id" : "https://w3id.org/transmodel/organisations#CrewBase"
     },
     "contactPoint" : {
       "@id" : "http://schema.org/contactPoint",
@@ -150,22 +117,12 @@
       "@id" : "https://w3id.org/transmodel/organisations#language",
       "@type" : "http://www.w3.org/2001/XMLSchema#language"
     },
-    "distributionChannelType" : {
-      "@id" : "https://w3id.org/transmodel/organisations#distributionChannelType",
-      "@type" : "@id"
-    },
-    "ParkingEntranceForVehicles" : {
-      "@id" : "https://w3id.org/transmodel/organisations#ParkingEntranceForVehicles"
-    },
     "characterisedBy" : {
       "@id" : "https://w3id.org/transmodel/organisations#characterisedBy",
       "@type" : "@id"
     },
     "OrganisationPart" : {
       "@id" : "https://w3id.org/transmodel/organisations#OrganisationPart"
-    },
-    "ServiceArea" : {
-      "@id" : "https://w3id.org/transmodel/organisations#ServiceArea"
     },
     "OrganizationalUnit" : {
       "@id" : "http://www.w3.org/ns/org#OrganizationalUnit"
@@ -175,14 +132,13 @@
       "@type" : "@id"
     },
     "description" : {
-      "@id" : "http://purl.org/dc/elements/1.1/description"
+      "@id" : "https://w3id.org/transmodel/organisations#description"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
     },
-    "TOBECHECKED" : {
-      "@id" : "https://w3id.org/transmodel/organisations#TOBECHECKED",
-      "@type" : "@id"
+    "TravelAgent" : {
+      "@id" : "https://w3id.org/transmodel/organisations#TravelAgent"
     },
     "classification" : {
       "@id" : "http://www.w3.org/ns/org#classification",
