@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transmodel Vocabularies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <div class="w-100 redbg">
+        <div class="container">
+            <div class="row">
+                    <div class="col-6">
+                            <h1 class="display-4">Snap</h1>
+                            <h5>Your transport data<br>into EU compliance</h5>
+                        </div>
+                        <div class="col-6 my-auto">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a href="" class=" whiteText px-2">What is Snap</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="" class=" whiteText px-2">Why Snap</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a href="" class=" whiteText px-2">Get in touch</a>
+                                </li>
+                            </ul>
+                        </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-5">
+        <!-- <div class="container">
+                <h3>If you want to learn more, check out the <a href="https://www.snap-project.eu/" class="">Snap Project.</a></h3>
+        </div> -->
+        <h1 class="title mt-5">Transmodel Vocabularies</h1>
+        <nav class="navbar navbar-expand-md navbar-dark ">
+            <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+                <div class="" id="">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link focus " id="nav-description-tab" data-toggle="tab" href="#nav-description" role="tab" aria-controls="nav-description" aria-selected="true">Description</a>
+                        <a class="nav-item nav-link" id="nav-voc-catalog-tab" data-toggle="tab" href="#nav-voc-catalog" role="tab" aria-controls="nav-voc-catalog" aria-selected="false">Vocabulary Catalog</a>
+                        <a class="nav-item nav-link" id="nav-catalog-list-tab" data-toggle="tab" href="#nav-catalog-list" role="tab" aria-controls="nav-catalog-list" aria-selected="false">SKOS lists Catalog</a>
+                        <a class="nav-item nav-link" id="nav-voc-tab" data-toggle="tab" href="#nav-voc" role="tab" aria-controls="nav-voc" aria-selected="false">Reused Vocabularies</a>
+                        <a class="nav-item nav-link" id="nav-non-ont-tab" data-toggle="tab" href="#nav-non-ont" role="tab" aria-controls="nav-non-ont" aria-selected="false">Non ontological resources</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="mt-3 tab-content" id="nav-tabContent">
+            <div class="container tab-pane fade show focus in active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+                <h2>Description:</h2>
+                <p class="text-justify mt-3">
+                        With the ultimate goal of enabling the provision of multimodal transportation services,
+                        the <abbr title="European Union">EU</abbr> Regulation <a href="https://eur-lex.europa.eu/eli/reg_del/2017/1926/oj">2017/1926</a> is
+                        requiring transport stakeholders to allow access to their data in specific data formats
+                        (i.e., <abbr title="Network Timetable Exchange">NeTEx</abbr>,
+                        <abbr title="Service Interface for Real Time
+                        Information">SIRI</abbr>). Currently, the requested data formats are rarely
+                        used, thus a data conversion is needed.
+                        </p>
+                        
+                        <p class="text-justify">
+                        This regulation is based in the EU Directive <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1575364946186&amp;uri=CELEX:32010L0040">2010/40/EU</a> for the deploymen of Intelligent
+                        Transport Systems in the field of road transport and for interfaces with other modes of transport.
+                        </p>
+                        
+                        <p class="text-justify">
+                        The <abbr title="Semantic National Access Point">SNAP</abbr> solution
+                        supports data conversion, decreasing the time required to perform it and hiding its
+                        complexity. With <b>SNAP</b> transportation data will be compliant with the EU Regulation in a
+                        snap &#129310;
+                        </p>
+                        
+                        <p class="text-justify">
+                        Transport authorities, operators and infrastructure managers can render their legacy data
+                        interoperable and compliant with standards using a solution fit to their needs
+                        </p>
+            </div>
+
+            <div class="tab-pane fade" id="nav-voc-catalog" role="tabpanel" aria-labelledby="nav-voc-catalog-tab">
+                <div class="container">
+                    <h2>Vocabulary Catalog:</h2>
+                    <p class="text-left mt-3">
+                        Below is the list of vocabularies that are being created within the SNAP Project specially
+                        for use by transit organisations or authorities but also for any other organisation which
+                        wants to make their transit data compliant with Transmodel model of the European
+                        <abbr title="Intelligent Transport Systems">ITS</abbr> Directive.
+                    </p>
+                </div>
+
+                    <div class="row">
+                        <div class="col"></div>
+                    </div>
+                <div class="container">
+                    <div id="vocabulary" class="table-responsive"></div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="nav-catalog-list" role="tabpanel" aria-labelledby="nav-catalog-list-tab">
+                <div class="container">
+                    <h2>SKOS lists Catalog:</h2>
+                    <p class="text-left mt-3">
+                            This is the catalog of the SKOS list generated as part of the development of the
+                            Transmodel Ontology.
+                    </p>
+                </div>
+                <div class="container">
+                    <table id="skos" class="table-responsive"></table>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="nav-voc" role="tabpanel" aria-labelledby="nav-voc-tab">
+                <div class="container">
+                    <h2>Reused Vocabularies:</h2>
+                    <p class="text-left mt-3">
+                            Below is a list of vocabularies that are reused within the Transmodel Ontology. It is
+                            important to mention that for the development of these vocabularies, the methodology being
+                            used for this project has not been explicitly followed. Therefore, there is no
+                            documentation available related to Use Cases, User Stories, etc.
+                    </p>
+                </div>
+                <div>
+                    <div class="container">
+                        <table id="reused" class="table-responsive"></table>
+                    </div>
+
+                </div>
+            </div>
+            <div class=" container tab-pane fade" id="nav-non-ont" role="tabpanel" aria-labelledby="nav-voc-non-ont">
+                <h2>Non ontological Resources:</h2>
+                <div class="mt-3">
+                    <p>
+                        It is important to note that, according to the used existing ontology engineering
+                        methodology, and as recorded commonly in other ontology engineering methodologies as well,
+                        these non-ontological resources have gone through an extensive process of reengineering so
+                        as to avoid the biases that may have a negative impact on the resulting ontologies.
+                        </p>
+                        
+                        <p>
+                        This is due to the fact that the choice of implementation (UML, XML and CSV, respectively)
+                        usually generates modelling biases, especially when it comes to representing the names of
+                        properties (local vs global names), n-ary relations, enumerations that can be converted
+                        into thesauri or controlled lists of codes, etc. Therefore, the process of reengineering
+                        has focused on eliminating as many of these biases as possible so as to generate a model
+                        that is <b>sufficiently rich</b> in terms of <b>expressiveness</b> and makes a natural usage of the
+                        ontology modelling language OWL, which is the one commonly used for ontology
+                        implementation nowadays.
+                        </p>
+                        
+                        <p>
+                        Three are the resources which have helped into the implementation of the Transmodel
+                        Ontology: the Transmodel model (UML), the NeTEx standard (XML Schema) and de GTFS model (CSV).
+                        </p>
+            </div>
+            <h3 id="" class="mt-5">Transmodel</h3>
+            <div class="mt-3" id="text-org8fc13ee">
+                <p>
+                The <a href="http://www.transmodel-cen.eu/">Transmodel model</a> is the <abbr title="Comité Européen de Normalisation">CEN</abbr> (<a href="https://www.cen.eu/Pages/default.aspx">European Committee for Standardization</a>)  European
+                Reference Data Model for Public Transport Information. As discussed in the corresponding
+                website, it provides "an abstract model of common public transport concepts and data
+                structures that can be used to build many different kinds of public transport information
+                system, including timetabling, fares, operational management, real time data, journey
+                planning etc".
+                </p>
+                
+                <p>
+                The Transmodel (version 6, 2017) is made available in UML and browsable and downloadable
+                from its <a href="http://www.transmodel-cen.eu/downloads/">downloads</a> section.
+                </p>
+                </div>
+                <h3 class="mt-3">NeTEx</h3>
+                <div class="mt-3" id="text-orga44ea27">
+                    <p>
+                        The NeTEx (public transport Network Timetable Exchange) is another CEN standard for the
+                        interoperable exchange of public transport passenger information between systems. It is
+                        implemented in XML schema, with its latest version (v1.09) being available at <a href="https://github.com/NeTEx-CEN/NeTEx">Github</a>. The
+                        functional scope of NeTEx is divided into three parts, each covering a functional subset
+                        of Transmodel: Part 1 describes the fixed Network (stops, routes, lines, etc.); Part 2 is
+                        mainly focused on Timetables; and Part 3 covers Fare data.
+                    </p>
+                </div>
+                    <h3 class="mt-3">GTFS</h3>
+                    <div class="mt-3" id="text-org1ba68ea">
+                    <p>
+                    The <a href="https://developers.google.com/transit/gtfs/reference/">GTFS</a> (General Transit Feed Specification) model is a format proposed by Google for the
+                    representation of public transportation schedules and associated geographic information,
+                    which has become a de facto standard for the publication of the information on public
+                    transport that can be used to provide trip planning functionality.
+                    </p>
+                    
+                    <p>
+                    The last version of the <a href="https://gtfs.org/reference/static">GTFS feed</a> (revised January 17, 2019) consists of a collection of
+                    at least 5, 2 conditionally required and up to 15 CSV files contained within a .zip file,
+                    which describe together a transit system's scheduled operations as visible to riders. It
+                    is focused on scheduled information and does not include real-time information, for which
+                    there is the GTFS-realtime specification.
+                    </p>
+                    </div>
+                    </div>
+        </div>
+        <div class="container">
+                <div class="redbg p-1 my-5"></div>
+                <section class="page-section" id="partners">
+                            <div class="text-center my-5">
+                                    <h1>EIT Digital partners</h1>
+                            </div>
+                          <div class="row partners">
+                            <div class="col-lg-6 ml-auto mb-3 d-flex justify-content-center align-items-center">
+                              <img class="img-fluid" src="img/EIT-Digital.png" alt="EIT Logo">
+                            </div>
+                            <div class="col-lg-6 ml-auto mb-3 d-flex justify-content-center align-items-center">
+                              <img class="img-fluid" src="img/eu.png" alt="EIT Digital Logo">
+                            </div>
+                          </div>
+                          <div class="row justify-content-between partners">
+                            <div class="col-lg-3 mb-5 d-flex justify-content-center align-items-end">
+                              <img class="img-fluid" src="img/cefriel.png" alt="Partner Logo">
+                            </div>
+                            <div class="col-lg-3 mb-5 d-flex justify-content-center align-items-end">
+                              <img class="img-fluid" src="img/engineering.png" alt="Partner Logo">
+                            </div>
+                            <div class="col-lg-3 mb-5 d-flex justify-content-center align-items-end">
+                              <img class="img-fluid" src="img/universita_genova.png" alt="Partner Logo">
+                            </div>
+                            <div class="col-lg-3 mb-5 d-flex justify-content-center align-items-end">
+                              <img class="img-fluid" src="img/politecnica.png" alt="Partner Logo">
+                            </div>
+                          </div>
+                      </section>
+        </div>
+    </div> 
+    <div class="redbg p-3">
+        <div class="container-fluid">
+                <h5 class="whiteText"><a href="https://www.snap-project.eu/" class="whiteText">Snap <span id="year"></span></a></h5>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
