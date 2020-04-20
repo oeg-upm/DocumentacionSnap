@@ -32,7 +32,7 @@ let table1 = [
     "Lang": "en",
     "Domain": "transit",
     "Links": "<a href=\"https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-commons.owl\"><img src=\"./icons/repo.svg\" class=\"icon\">repository</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/labels/commons\"><img src=\"./icons/issue-opened.svg\" class=\"icon\">issues</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions\"><img src=\"./icons/tasklist.svg\" class=\"icon\">requirements</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/releases\"><img src=\"./icons/tag.svg\" class=\"icon\">releases</a>",
-    "Description": "Commons module (prefix tmcommons, <a href=\"https://w3id.org/transmodel/commons\">https://w3id.org/transmodel/commons#</a>) to represent all those concepts and properties that are general enough to be used across all modules."
+    "Description": "Commons module (prefix tmcommons, <a href=\"https://w3id.org/transmodel/commons\">https://w3id.org/transmodel/commons</a>#) to represent all those concepts and properties that are general enough to be used across all modules."
   },
   {
     "Vocabulary": "<a href=\"./tm-facilities.owl/documentation/index-en.html\">Facilities</a>",
@@ -43,7 +43,7 @@ let table1 = [
     "Lang": "en",
     "Domain": "facilities",
     "Links": "<a href=\"https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-facilities.owl\"><img src=\"./icons/repo.svg\" class=\"icon\">repository</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/labels/facilities\"><img src=\"./icons/issue-opened.svg\" class=\"icon\">issues</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions\"><img src=\"./icons/tasklist.svg\" class=\"icon\">requirements</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/releases\"><img src=\"./icons/tag.svg\" class=\"icon\">releases</a>",
-    "Description": "Facilities module (prefix tmfac, <a href=\"https://w3id.org/transmodel/facilities\">https://w3id.org/transmodel/facilities#</a>) to represent all the information related to facilities."
+    "Description": "Facilities module (prefix tmfac, <a href=\"https://w3id.org/transmodel/facilities\">https://w3id.org/transmodel/facilities</a>#) to represent all the information related to facilities."
   },
   {
     "Vocabulary": "<a href=\"./tm-fares.owl/documentation/index-en.html\">Fares</a>",
@@ -54,7 +54,11 @@ let table1 = [
     "Lang": "en",
     "Domain": "fares",
     "Links": "<a href=\"https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-fares.owl\"><img src=\"./icons/repo.svg\" class=\"icon\">repository</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/labels/fares\"><img src=\"./icons/issue-opened.svg\" class=\"icon\">issues</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions\"><img src=\"./icons/tasklist.svg\" class=\"icon\">requirements</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/releases\"><img src=\"./icons/tag.svg\" class=\"icon\">releases</a>",
+<<<<<<< HEAD
     "Description": "Organisations module (prefix tmfares, <a href=\"https://w3id.org/transmodel/fares\">https://w3id.org/transmodel/fares#</a>) to represent all the information related to the public transport organisations."
+=======
+    "Description": "Organisations module (prefix tmorg, <a href=\"https://w3id.org/transmodel/organisations\">https://w3id.org/transmodel/organisations</a>#) to represent all the information related to the public transport organisations."
+>>>>>>> parent of 5d4e997... some missing files removed
   },
   {
     "Vocabulary": "<a href=\"./tm-journeys.owl/documentation/index-en.html\">Journeys</a>",
@@ -65,7 +69,7 @@ let table1 = [
     "Lang": "en",
     "Domain": "journeys",
     "Links": "<a href=\"https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-journeys.owl\"><img src=\"./icons/repo.svg\" class=\"icon\">repository</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/labels/journeys\"><img src=\"./icons/issue-opened.svg\" class=\"icon\">issues</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions\"><img src=\"./icons/tasklist.svg\" class=\"icon\">requirements</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/releases\"><img src=\"./icons/tag.svg\" class=\"icon\">releases</a>",
-    "Description": "Journeys module (prefix tmjourney, <a href=\"https://w3id.org/transmodel/journeys\">https://w3id.org/transmodel/journeys#</a>) to represent all the information related to the trips and the different types of journeys for passengers and vehicles."
+    "Description": "Journeys module (prefix tmjourney, <a href=\"https://w3id.org/transmodel/journeys\">https://w3id.org/transmodel/journeys</a>#) to represent all the information related to the trips and the different types of journeys for passengers and vehicles."
   },
   {
     "Vocabulary": "<a href=\"./tm-organisations.owl/documentation/index-en.html\">Organisations</a>",
@@ -76,7 +80,7 @@ let table1 = [
     "Lang": "en",
     "Domain": "organisations",
     "Links": "<a href=\"https://github.com/oeg-upm/transmodel-ontology/blob/master/ontology/tm-org.owl\"><img src=\"./icons/repo.svg\" class=\"icon\">repository</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/labels/organisations\"><img src=\"./icons/issue-opened.svg\" class=\"icon\">issues</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/wiki/competency-questions\"><img src=\"./icons/tasklist.svg\" class=\"icon\">requirements</a><br><a href=\"https://github.com/oeg-upm/transmodel-ontology/releases\"><img src=\"./icons/tag.svg\" class=\"icon\">releases</a>",
-    "Description": "Organisations module (prefix tmorg, <a href=\"https://w3id.org/transmodel/organisations\">https://w3id.org/transmodel/organisations#</a>) to represent all the information related to the public transport organisations."
+    "Description": "Organisations module (prefix tmorg, <a href=\"https://w3id.org/transmodel/organisations\">https://w3id.org/transmodel/organisations</a>#) to represent all the information related to the public transport organisations."
   }
  ]
  let table2 = [
